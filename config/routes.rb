@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  resources :locations
+
+  resources :speakers
+
+  resources :events
+
   get 'static_pages/home'
 
   devise_for :users
