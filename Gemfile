@@ -19,4 +19,5 @@ gem 'simple_form'
 gem 'faker', group: :development
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
+gem 'friendly_id', '~> 5.1.0'
 

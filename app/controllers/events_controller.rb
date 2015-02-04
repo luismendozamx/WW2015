@@ -22,9 +22,6 @@ class EventsController < ApplicationController
 
   def create
     @event = Event.new(event_params)
-
-    @event.slug = clean_name(@event.name)
-
     @event.save
     respond_with(@event)
   end
@@ -41,14 +38,11 @@ class EventsController < ApplicationController
 
   private
     def set_event
-      @event = Event.find_by(slug: params[:id])
+      @event = Event.friendly.find(params[:id])
     end
 
     def event_params
       params.require(:event).permit(:name, :description, :speaker_id, :location_id)
     end
 
-    def clean_name(name)
-      I18n.transliterate(name.downcase.split.join)
-    end
 end

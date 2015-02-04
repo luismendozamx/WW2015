@@ -2,10 +2,10 @@ class Event < ActiveRecord::Base
   belongs_to :speaker
   belongs_to :location
 
-  # Make slug the id for params.
-  def to_param
-    slug
-  end
+  # Friendly Id
+  extend FriendlyId
+  friendly_id :name, use: :slugged
+
 
   # Return Speaker based on id.
   def speaker
