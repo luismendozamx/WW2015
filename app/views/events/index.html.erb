@@ -1,11 +1,15 @@
 
-<% @events.each do |event| %>
-  <div class="row event">
-    <div class="col-sm-12">
-      <p><strong><%= link_to event.name, event %></strong></p>
-      <p>by <%= link_to event.speaker.full_name, speaker_path(event.speaker) %></p>
-      <p>at <%= link_to event.location.name, location_path(event.location) %></p>
-      <p><%= event.description %></p>
+<div class="container">
+
+  <% @events.each do |event| %>
+    <div class="row event">
+      <div class="col-sm-12">
+        <p><strong><%= link_to event.name, event %></strong></p>
+        <p>by <%= link_to event.speaker.full_name, speaker_path(event.speaker) %></p>
+        <p>at <%= link_to event.location.name, location_path(event.location) %></p>
+        <p><%= event.description %></p>
+      </div>
     </div>
-  </div>
-<% end %>
+  <% end %>
+
+</div>

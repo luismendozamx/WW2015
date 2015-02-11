@@ -1,19 +1,28 @@
-<h2>Sign up</h2>
+<div id="register" class="container page-container">
+  <div class="row">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h2 class="center">Regístrate</h2>
 
-<%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <%= f.error_notification %>
+      <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+        <%= f.error_notification %>
 
-  <div class="form-inputs">
-    <%= f.input :first_name, required: true, autofocus: true %>
-    <%= f.input :last_name, required: true %>
-    <%= f.input :email, required: true %>
-    <%= f.input :password, required: true, hint: ("#{@minimum_password_length} characters minimum" if @validatable) %>
-    <%= f.input :password_confirmation, required: true %>
+        <div class="form-inputs">
+          <%= f.input :first_name, label: "Nombre", required: true, autofocus: true %>
+          <%= f.input :last_name, label: "Apellido", required: true %>
+          <%= f.input :email, required: true %>
+          <%= f.input :password, label: "Contraseña", required: true, hint: ("#{@minimum_password_length} caracteres mínimo" if @validatable) %>
+        </div>
+
+        <div class="form-actions">
+          <%= f.button :submit, "Enviar", class: "btn-login btn-full" %>
+        </div>
+      <% end %>
+    </div>
   </div>
-
-  <div class="form-actions">
-    <%= f.button :submit, "Sign up" %>
+  <div class="row call-to">
+    <div class="col-sm-6 col-sm-offset-3">
+      <h4 class="center">¿Ya estás registrado?</h4>
+      <%= link_to "Ingresa", login_path, class: "btn btn-default btn-full" %>
+    </div>
   </div>
-<% end %>
-
-<%= render "devise/shared/links" %>
+</div>

@@ -20,7 +20,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <%= link_to "WW2015", root_path, class: "navbar-brand" %>
+        <%= link_to image_tag("logo-nav.png", class: "img-responsive logo-nav"), root_path, class: "navbar-brand" %>
       </div>
 
       <div class="collapse navbar-collapse" id="nav-collapse">
@@ -28,13 +28,16 @@
           
         </ul>
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Events", events_path %></li>
+          <li><%= link_to "Ponentes", speakers_path %></li>
+          <li><%= link_to "Agenda", events_path %></li>
+          <li><a href="#">Showrooms</a></li>
+          <li><a href="#">Clases</a></li>
+          <li><a href="#">Banamex</a></li>
           <% if user_signed_in? %>
-              <li><%= link_to "Settings", edit_user_registration_path %></li>
-              <li><%= link_to "Log Out", logout_path %></li>
+              <li><%= link_to "Mis Eventos", edit_user_registration_path %></li>
+              <li><%= link_to "Log Out", logout_path, class: "btn btn-success" %></li>
             <% else %>
-              <li><%= link_to "Log In", login_path %></li>
-              <li><%= link_to "Sign Up", register_path %></li>
+              <li><%= link_to "Regístrate", register_path, class: "btn btn-success" %></li>
             <% end %>
         </ul>
       </div>
@@ -59,9 +62,14 @@
     </div>
   <% end %>
 
-<div class="container" id="main-container">
+
   <%= yield %>
-</div>
+
+  <footer>
+    <div class="container">
+      
+    </div>
+  </footer>
 
 </body>
 </html>
