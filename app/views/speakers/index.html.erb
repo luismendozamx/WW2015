@@ -1,29 +1,14 @@
-<h1>Listing speakers</h1>
+<div class="container">
+  
+  <div class="row">
+    <h1 class="center">Ponentes</h1>
+  </div>
 
-<table>
-  <thead>
-    <tr>
-      <th>First name</th>
-      <th>Last name</th>
-      <th>Bio</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
+  <div id="ponentes" class="row">
     <% @speakers.each do |speaker| %>
-      <tr>
-        <td><%= speaker.first_name %></td>
-        <td><%= speaker.last_name %></td>
-        <td><%= speaker.bio %></td>
-        <td><%= link_to 'Show', speaker %></td>
-        <td><%= link_to 'Edit', edit_speaker_path(speaker) %></td>
-        <td><%= link_to 'Destroy', speaker, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
+      <div class="col-sm-3 ponente">
+        <h3 class="center"><%= link_to speaker.full_name, speaker_path(speaker) %></h3>
+      </div>
     <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Speaker', new_speaker_path %>
+  </div>
+</div>

@@ -1,19 +1,15 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <div class="row">
+    <h1>
+      <%= @speaker.full_name %>
+    </h1>
 
-<p>
-  <strong>First name:</strong>
-  <%= @speaker.first_name %>
-</p>
+    <h3>
+      <strong>Bio:</strong>
+    </h3>
 
-<p>
-  <strong>Last name:</strong>
-  <%= @speaker.last_name %>
-</p>
+    <p><%= @speaker.bio %></p>
 
-<p>
-  <strong>Bio:</strong>
-  <%= @speaker.bio %>
-</p>
-
-<%= link_to 'Edit', edit_speaker_path(@speaker) %> |
-<%= link_to 'Back', speakers_path %>
+    <%= link_to 'Edit', edit_speaker_path(@speaker) %>
+  </div>
+</div>

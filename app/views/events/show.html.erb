@@ -1,24 +1,26 @@
-<p id="notice"><%= notice %></p>
+<div class="container">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @event.name %>
-</p>
+  <p>
+    <strong>Name:</strong>
+    <%= @event.name %>
+  </p>
 
-<p>
-  <strong>Description:</strong>
-  <%= @event.description %>
-</p>
+  <p>
+    <strong>Description:</strong>
+    <%= @event.description %>
+  </p>
 
-<p>
-  <strong>Speaker:</strong>
-  <%= @event.speaker.full_name %>
-</p>
+  <p>
+    <strong>Speaker:</strong>
+    <%= @event.speaker.full_name %>
+  </p>
 
-<p>
-  <strong>Speaker:</strong>
-  <%= @event.location.name %>
-</p>
+  <p>
+    <strong>Speaker:</strong>
+    <%= @event.location.name %>
+  </p>
 
-<%= link_to 'Edit', edit_event_path(@event) %> |
-<%= link_to 'Back', events_path %>
+  <%= link_to 'Edit', edit_event_path(@event) %> |
+  <%= link_to 'Back', events_path %>
+</div>
