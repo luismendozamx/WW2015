@@ -6,9 +6,7 @@
 
   <div id="ponentes" class="row">
     <% @speakers.each do |speaker| %>
-      <div class="col-sm-3 ponente">
         <h3 class="center"><%= link_to speaker.full_name, speaker_path(speaker) %></h3>
-      </div>
     <% end %>
   </div>
 </div>

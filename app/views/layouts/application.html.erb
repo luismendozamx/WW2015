@@ -27,9 +27,9 @@
         <ul class="nav navbar-nav navbar-right">
           <li><%= link_to "Ponentes", speakers_path %></li>
           <li><%= link_to "Agenda", events_path %></li>
-          <li><a href="#">Showrooms</a></li>
-          <li><a href="#">Clases</a></li>
+          <li><a href="#">Showrooms</a></li>          
           <li><a href="#">Banamex</a></li>
+          <li><%= link_to "2014", last_year_path %></li>
           <% if user_signed_in? %>
               <li><%= link_to "Mis Eventos", edit_user_registration_path %></li>
               <li><%= link_to "Log Out", logout_path, class: "btn btn-success" %></li>
