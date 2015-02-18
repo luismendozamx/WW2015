@@ -1,17 +1,167 @@
 
-<div class="container">
+<div id="agenda" class="container">
 
-  <% @events.each do |event| %>
-    <div class="row event">
-      <div class="col-sm-12">
-        <p><strong><%= link_to event.name, event %></strong></p>
-        <p>by <%= link_to event.speaker.full_name, speaker_path(event.speaker) %></p>
-        <% if event.location %>
-          <p>at <%= link_to event.location.name, location_path(event.location) %></p>
-        <% end %>
-        <p><%= event.description %></p>
-      </div>
+  <div class="row event-nav">
+    <div class="col-sm-12">
+      <ul class="nav nav-pills nav-justified" role="tablist">
+        <li role="presentation" class="active"><a href="#events" role="tab" data-toggle="tab">Conferencias</a></li>
+        <li role="presentation"><a href="#workshops" role="tab" data-toggle="tab">Workshops</a></li>
+      </ul>
     </div>
-  <% end %>
+  </div>
+
+  <div class="tab-content">
+
+    <div id="events" role="tabpanel" class="tab-pane active">
+
+      <div class="row day-nav">
+        <div class="col-sm-12">
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#day1" role="tab" data-toggle="tab">Viernes 6</a></li>
+            <li role="presentation"><a href="#day2" role="tab" data-toggle="tab">Sábado 7</a></li>
+            <li role="presentation"><a href="#day3" role="tab" data-toggle="tab">Domingo 8</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane active" id="day1">
+        <% Day.find(1).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="day2">
+        <% Day.find(2).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="day3">
+        <% Day.find(3).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+      </div>
+
+    </div>
+
+    <div id="wokshops" role="tabpanel" class="tab-pane">
+
+      <div class="row day-nav">
+        <div class="col-sm-12">
+          <ul class="nav nav-pills nav-justified" role="tablist">
+            <li role="presentation" class="active"><a href="#day1" role="tab" data-toggle="tab">Viernes 6</a></li>
+            <li role="presentation"><a href="#day2" role="tab" data-toggle="tab">Sábado 7</a></li>
+            <li role="presentation"><a href="#day3" role="tab" data-toggle="tab">Domingo 8</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="tab-content">
+
+        <div role="tabpanel" class="tab-pane active" id="day1">
+        <% Day.find(1).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="day2">
+        <% Day.find(2).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+        <div role="tabpanel" class="tab-pane" id="day3">
+        <% Day.find(3).events.order('slot ASC').each do |event| %>
+          <div class="row event">
+            <div class="col-xs-2 time">
+              <div class="content">
+                <p class="center"><%= event.time %></p>
+              </div>
+            </div>
+
+            <div class="col-xs-10 info">
+              <div class="content">
+                <p class="center name"><%= event.name %></p>
+                <p class="center speaker"><%= event.speaker.full_name %></p>
+              </div>
+            </div>
+          </div>
+        <% end %>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
 
 </div>
