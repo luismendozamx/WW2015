@@ -20,6 +20,10 @@
 $(document).on('ready page:load', function () {
   $(document).ready( function(){
     ajustaPonentes();
+    $("#showroom-carousel").owlCarousel({
+      singleItem: true,
+      slideSpeed : 300
+    });
   });
 
   $(window).resize( function(){

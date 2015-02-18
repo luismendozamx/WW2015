@@ -38,12 +38,22 @@
 <!-- /Mapa -->
 
 <!-- Ponentes -->
+<section id="intro-ponentes">
+  <div class="container home">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">EXPERTAS <span>2015</span></h1>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="ponentes">
   <div class="container-fluid">
     <div class="row-fluid">
 
       <% @speaker = Speaker.find(1) %>
-      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -53,7 +63,7 @@
       </div>
 
       <% @speaker = Speaker.find(2) %>
-      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -63,7 +73,7 @@
       </div>
 
       <% @speaker = Speaker.find(3) %>
-      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -73,7 +83,7 @@
       </div>
 
       <% @speaker = Speaker.find(4) %>
-      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -83,7 +93,7 @@
       </div>
 
       <% @speaker = Speaker.find(5) %>
-      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -92,7 +102,7 @@
         </div>
       </div>
 
-      <div class="col-sm-4 col-xs-6 ponente-mas">
+      <div class="col-md-4 col-sm-6 ponente-mas">
         <div class="link">
           <h3 class="center"><%= link_to "Más >>", speakers_path %></h3>
         </div>
@@ -104,17 +114,172 @@
 <!-- /Ponentes -->
 
 <!-- Showrooms -->
-<section id="showrooms">
+<section id="showrooms-home">
   <div class="container">
     <div class="row">
-      <div class="col-sm-6">
+      <div class="col-md-5">
         <h1>Showrooms</h1>
         <p>Son espacios dentro de las suites del hotel The St. Regis Mexico City, las cuales serán convertidas en showrooms de productos y servicios increíbles. Inspirados y dedicados a las mujeres actuales como mamás, empresarias, profesionistas, estudiantes, artistas, escritoras y deportistas.</p>
 
         <p>Las asistentes a Women´s Weekend podrán visitar y comprar en estos Showrooms de diversas marcas, especializadas en salud, belleza , moda y diseño entre otros, permitiendo experiencias privadas y exclusivas.</p>
       </div>
-      <div class="col-sm-6">
-        
+      <div class="col-md-6 col-md-offset-1 col-sm-12">
+        <div id="showroom-carousel" class="row owl-carousel">
+
+          <div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-01.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-02.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-03.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-04.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-05.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-06.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-07.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-08.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-09.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-10.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-11.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-12.png", class: "img-responsive center" %>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-12.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-14.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-15.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-16.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-17.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-18.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-19.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-20.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-21.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-22.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-23.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-24.png", class: "img-responsive center" %>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-25.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-26.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-27.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-28.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-29.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-30.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-31.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-32.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-33.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-34.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-35.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-36.png", class: "img-responsive center" %>
+            </div>
+          </div>
+
+          <div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-37.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-38.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-39.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-40.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-41.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-42.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-43.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-44.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-45.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-46.png", class: "img-responsive center" %>
+            </div>
+            <div class="col-xs-3">
+              <%= image_tag "showrooms/showroom-47.png", class: "img-responsive center" %>
+            </div>
+          </div>
+
+        </div>
       </div>
     </div>
   </div>
@@ -126,12 +291,30 @@
 <section id="sponsors">
   <div class="container">
     <div class="row">
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
-      <div class="col-sm-4 sponsor"><div class="sponsor-container"></div></div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-08.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-07.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-06.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-05.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-04.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-03.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-02.png", class: "img-responsive center" %>
+      </div>
+      <div class="col-sm-3 col-xs-6 sponsor">
+        <%= image_tag "sponsors/sponsor-01.png", class: "img-responsive center" %>
+      </div>
     </div>
   </div>
 </section>
