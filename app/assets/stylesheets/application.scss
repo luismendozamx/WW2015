@@ -90,9 +90,10 @@ footer{
 
 #cover{
   background-image: image-url("cover.jpg");
-  background-position: center center;
+  background-position: top center;
   background-size: cover;
   width: 100%;
+  margin-top: -2px;
 
   .cover-images{
     padding-top: 100px;
@@ -178,6 +179,87 @@ footer{
       height: 100%;
       width: 100%;
     }
+  }
+}
+
+#intro-ponentes{
+  background-color: $secondary-color;
+  color: #fff;
+
+  .container{
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  span{
+    color: $primary-color;
+    font-weight: 300;
+  }
+}
+
+#ponentes-agenda{
+  padding-top: 30px;
+  padding-bottom: 30px;
+
+  a{
+    color: #fff;
+  }
+
+  .modal-header{
+    border: 0px;
+  }
+
+  .ponente-list{
+    background-size: cover;
+    background-position: center center;
+    color: #fff;
+    padding-right: 0px;
+    padding-left: 0px;
+    text-shadow: 1px 1px 3px #000;
+
+    .content{
+      padding: 50px 15px;
+
+      @media only screen and (max-width: 1200px){
+        padding: 30px 15px;
+      }
+
+      @media only screen and (max-width: 778px){
+        padding: 40px 15px;
+      }
+    }
+
+    .description{
+      text-align: center;
+    }
+
+    .overlay{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 183, 159, 0.5);
+    }
+
+    &:hover{
+
+      .overlay{
+        background-color: rgba(0, 183, 159, 0.1);
+        @include transition(all 0.3s ease-in);
+      }
+    }
+  }
+
+}
+
+#cover-2014{
+  background-image: image-url("intro-2014.jpg");
+  background-position: top center;
+  background-size: cover;
+  width: 100%;
+  margin-top: -5px;
+
+  .cover-images{
+    padding-top: 100px;
+    padding-bottom: 100px;
   }
 }
 

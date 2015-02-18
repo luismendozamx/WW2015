@@ -1,5 +1,7 @@
 class Speaker < ActiveRecord::Base
   has_many :events
+  belongs_to :category
+
   validates :first_name, :last_name, presence: true
 
   # Friendly Id

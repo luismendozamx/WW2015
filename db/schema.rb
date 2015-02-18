@@ -11,7 +11,13 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150216233302) do
+ActiveRecord::Schema.define(version: 20150218010252) do
+
+  create_table "categories", force: true do |t|
+    t.string   "name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "events", force: true do |t|
     t.string   "name"
@@ -39,6 +45,8 @@ ActiveRecord::Schema.define(version: 20150216233302) do
     t.text     "bio"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "description"
+    t.integer  "category_id"
   end
 
   add_index "speakers", ["slug"], name: "index_speakers_on_slug", using: :btree

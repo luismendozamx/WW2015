@@ -15,3 +15,41 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require_tree .
+
+$(document).on('ready page:load', function () {
+  $(document).ready( function(){
+    console.log("ready");
+    ajustaPonentes();
+  });
+
+  $(window).resize( function(){
+    ajustaPonentes();
+  });
+});
+
+function ajustaPonentes(){
+  var arr = $('.ponente-list');
+  var max = 0;
+  var height = 0;
+
+  // Encuentra máximo de altura
+  for (var i = 0; i <= arr.length; i++){
+    if( $(arr[i]).height() > max )
+      max = $(arr[i]).height();
+  }
+
+  if( max > 220)
+    max = 220;
+
+  // Ajusta todos al máximo
+  for (var i = 0; i <= arr.length; i++){
+    height = $(arr[i]).children().children().height();
+
+    $(arr[i]).children().children().css("padding-top", (max - height)/2 + "px" );
+    $(arr[i]).children().children().css("padding-bottom", (max - height)/2 + "px" );
+    
+  }
+}
+
+
+

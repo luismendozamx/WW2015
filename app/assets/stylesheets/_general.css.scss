@@ -35,3 +35,9 @@ $dark-color: #333333;
   margin-top: 20px;
   margin-bottom: 30px;
 }
+
+a:visted,
+a:active{
+  background-color: none;
+  border:none;
+}

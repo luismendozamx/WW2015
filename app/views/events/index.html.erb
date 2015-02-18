@@ -6,7 +6,9 @@
       <div class="col-sm-12">
         <p><strong><%= link_to event.name, event %></strong></p>
         <p>by <%= link_to event.speaker.full_name, speaker_path(event.speaker) %></p>
-        <p>at <%= link_to event.location.name, location_path(event.location) %></p>
+        <% if event.location %>
+          <p>at <%= link_to event.location.name, location_path(event.location) %></p>
+        <% end %>
         <p><%= event.description %></p>
       </div>
     </div>
