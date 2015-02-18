@@ -7,6 +7,8 @@ Rails.application.routes.draw do
 
   get 'static_pages/home'
   get '2014', to: 'static_pages#a2014', as: :last_year
+  get 'banamex', to: 'static_pages#banamex', as: :banamex
+  get 'showrooms', to: 'static_pages#showrooms', as: :showrooms
 
   devise_for :users
 

@@ -4,4 +4,10 @@ class StaticPagesController < ApplicationController
 
   def a2014
   end
+
+  def showrooms
+  end
+
+  def banamex
+  end
 end

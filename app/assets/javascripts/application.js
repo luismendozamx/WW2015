@@ -14,11 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap-sprockets
+//= require owl.carousel
 //= require_tree .
 
 $(document).on('ready page:load', function () {
   $(document).ready( function(){
-    console.log("ready");
     ajustaPonentes();
   });
 

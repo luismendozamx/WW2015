@@ -24,7 +24,7 @@
 <section id="mapa">
   <div class="container-fluid">
     <div class="row-fluid">
-      <div class="col-sm-6">
+      <div class="col-sm-6 cuando">
         <h1 class="center">¿Cuándo y Dónde?</h1>
         <p class="center">6, 7 y 8 DE MARZO DE 2015</p>
         <p class="center">THE ST. REGIS MEXICO CITY</p>
@@ -41,42 +41,63 @@
 <section id="ponentes">
   <div class="container-fluid">
     <div class="row-fluid">
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <% @speaker = Speaker.find(1) %>
+      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <% @speaker = Speaker.find(2) %>
+      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <% @speaker = Speaker.find(3) %>
+      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <% @speaker = Speaker.find(4) %>
+      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <% @speaker = Speaker.find(5) %>
+      <div class="col-sm-4 col-xs-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
         </div>
       </div>
-      <div class="col-sm-4 ponente">
-        <div class="ponente-info">
-          <h3 class="center">Ponente</h3>
-          <p class="center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Suscipit consequuntur, architecto esse quasi sunt. Voluptatum pariatur maiores esse natus ex, optio debitis eum vitae exercitationem. Dolore provident ex pariatur, voluptate?</p>
+
+      <div class="col-sm-4 col-xs-6 ponente-mas">
+        <div class="link">
+          <h3 class="center"><%= link_to "Más >>", speakers_path %></h3>
         </div>
       </div>
+
     </div>
   </div>
 </section>
@@ -87,8 +108,10 @@
   <div class="container">
     <div class="row">
       <div class="col-sm-6">
-        <h3>Showrooms</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tempore optio omnis id laborum voluptatibus totam explicabo sit, nobis quasi vero consequatur, praesentium reprehenderit vel doloribus aperiam maxime suscipit. Voluptate, ad. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum eaque, accusantium laboriosam. Quo cumque nihil facere itaque mollitia consectetur saepe cupiditate debitis fugiat, temporibus, soluta, maxime doloremque alias, enim officia?</p>
+        <h1>Showrooms</h1>
+        <p>Son espacios dentro de las suites del hotel The St. Regis Mexico City, las cuales serán convertidas en showrooms de productos y servicios increíbles. Inspirados y dedicados a las mujeres actuales como mamás, empresarias, profesionistas, estudiantes, artistas, escritoras y deportistas.</p>
+
+        <p>Las asistentes a Women´s Weekend podrán visitar y comprar en estos Showrooms de diversas marcas, especializadas en salud, belleza , moda y diseño entre otros, permitiendo experiencias privadas y exclusivas.</p>
       </div>
       <div class="col-sm-6">
         

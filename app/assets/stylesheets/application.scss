@@ -12,6 +12,8 @@
  *
  *= require_tree .
  *= require_self
+ *= require owl.carousel
+ *= require owl.theme
  */
 
 @import "bootstrap-sprockets";
@@ -109,6 +111,12 @@ footer{
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
+  p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+  }
 }
 
 #mapa{
@@ -126,10 +134,25 @@ footer{
   h1{
     color: $primary-color;
   }
+
+  p{
+    font-size: 20px;
+    text-align: center;
+    font-weight: 300;
+  }
+
+  .cuando{
+    padding-top: 100px;
+
+    @media only screen and (max-width: 778px){
+      padding-top: 0px;
+    }
+  }
 }
 
 #ponentes{
   color: #fff;
+  text-shadow: 1px 1px 3px #333;
 
   .container-fluid{
     padding-right: 0px;
@@ -138,18 +161,57 @@ footer{
   
   .ponente{
     height: 300px;
-    background-color: lighten($secondary-color, 10%);
+    padding-left: 0px;
+    padding-right: 0px;
+    background-size: cover;
+    background-position: center center;
 
-    .ponente-info{
-      display: none;
+    .ponente-info{      
+      padding-top: 80px;
+      padding-left: 15px;
+      padding-right: 15px;
+
+      p{
+        font-size: 18px;
+        display: none;
+        font-weight: 300;
+      }
+    }
+
+    .overlay{
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 183, 159, 0.4);
     }
 
     &:hover{
-      background-color: $secondary-color;
 
-      .ponente-info{
-        display: block;
+      .overlay{
+        background-color: rgba(0, 183, 159, 0.8);
+        @include transition(all 0.1s ease-in);
       }
+      
+      .ponente-info{
+        p{
+          display: block;
+          @include transition(all 0.1s ease-in);
+        }
+      }
+    }
+  }
+
+  .ponente-mas{
+    height: 300px;
+    background-color: rgba(0, 183, 159, 0.8);
+    color: #fff;
+
+    a{
+      color: #fff;
+      font-size: 40px;
+    }
+
+    .link{
+      padding-top: 100px;
     }
   }
 }
@@ -161,6 +223,11 @@ footer{
   .row{
     padding-top: 40px;
     padding-bottom: 40px;
+  }
+
+  p{
+    font-size: 20px;
+    font-weight: 100;
   }
 }
 
@@ -240,9 +307,8 @@ footer{
     }
 
     &:hover{
-
       .overlay{
-        background-color: rgba(0, 183, 159, 0.1);
+        background-color: rgba(0, 183, 159, 0.2);
         @include transition(all 0.3s ease-in);
       }
     }
@@ -260,6 +326,50 @@ footer{
   .cover-images{
     padding-top: 100px;
     padding-bottom: 100px;
+  }
+}
+
+#expertas-2014{
+  .titulo{
+    width: 100%;
+    background-color: $primary-color;
+    color: #fff;
+
+    h1{
+      font-weight: 300;
+      padding-top: 0px;
+      padding-bottom: 0px;
+    }
+
+    .container{
+      padding-top: 40px;
+      padding-bottom: 40px;
+    }
+  }
+
+  .ponentes-2014{
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
+  .ponente-2014{
+    padding-bottom: 20px;
+    h3{
+      text-align: center;
+      color: $secondary-color;
+    }
+  }
+
+  .lista{
+    font-weight: 300;
+    color: $secondary-color;
+    text-align: center;
+    padding-bottom: 50px;
+
+    h3{
+      font-weight: 300;
+      line-height: 130%;
+    }
   }
 }
 
