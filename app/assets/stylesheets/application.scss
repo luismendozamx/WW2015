@@ -486,11 +486,32 @@ footer{
         padding-bottom: 5px;
         margin: 0px;
       }
+
+      .subtitle{
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+
       .speaker{
         padding-bottom: 10px;
         margin: 0px;
         color: $primary-color;
         font-weight: 500;
+      }
+    } 
+  }
+
+  .lunch{
+    color: #fff;
+    padding-right: 15px;
+
+    .content{
+      background-color: $secondary-color;
+
+      .name{
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 0px;
       }
     } 
   }

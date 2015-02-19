@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150218201253) do
+ActiveRecord::Schema.define(version: 20150219003832) do
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -37,6 +37,7 @@ ActiveRecord::Schema.define(version: 20150218201253) do
     t.integer  "day_id"
     t.string   "time"
     t.integer  "slot"
+    t.string   "subtitle"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", using: :btree
@@ -90,6 +91,10 @@ ActiveRecord::Schema.define(version: 20150218201253) do
     t.integer  "location_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.string   "time"
+    t.integer  "slot"
+    t.integer  "category_id"
+    t.integer  "day_id"
   end
 
 end

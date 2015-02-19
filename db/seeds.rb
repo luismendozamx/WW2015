@@ -36,10 +36,10 @@ Event.create(speaker_id: 4, day_id: 2, time: "19:00 - 20:00", slot: 15, name: "E
 
 Speaker.create(first_name: "KARINA", last_name: "VELASCO", category_id: 1, description: "CONDUCTORA, AUTORA, HEALTH COACH", bio: "Ha logrado fusionar sus dos pasiones: los medios de comunicación y disciplinas holísticas. Autora de los best sellers en español: \"Del Punto A al Punto G\" y \"El Arte de la Vida Sana\", su primer eBook: \"Amor Sagrado\", una guía holística sobre la sexualidad de la nueva era. El año pasado salió a la venta su nuevo libro \"Los Colores del Amor\".")
 Event.create(speaker_id: 5, day_id: 3, time: "11:00 - 12:00", slot: 18, name: "LOS COLORES DEL AMOR", description: "Aprenderás herramientas poderosas para retomar tu poder como mujer y atraer mas amor en tu vida. Descubrirás los diferentes colores del amor que son parte de tu ser, además de cómo utilizarlos para ser una mujer íntegra y relacionarte de una manera más saludable.")
-Workshop.create(title: "SHAKTI DANCE", description: "Exploraremos el poder de la energía sexual en nuestro cuerpo a través del baile y el movimiento. Con estas herramientas armonizaremos nuestro cuerpo despertando nuestros sentidos y liberando emociones para lograr que la energía orgásmica circule.")
+Workshop.create(title: "SHAKTI DANCE", speaker_id: 5, category_id: 3, day_id: 3, time: "13:00 - 14:00", slot: 13, description: "Exploraremos el poder de la energía sexual en nuestro cuerpo a través del baile y el movimiento. Con estas herramientas armonizaremos nuestro cuerpo despertando nuestros sentidos y liberando emociones para lograr que la energía orgásmica circule.")
 
 Speaker.create(first_name: "EDELMIRA", last_name: "CÁRDENAS", category_id: 1, description: "MASTER EN SEXOLOGÍA", bio: "Directora del proyecto a nivel nacional \"Educación Sexual a Domicilio\". Educadora Sexual de Durex y Sico. Columnista de Sexualidad del portal de Fernanda Familiar. Actualmente participa en diversos programas como: Está Cañón con Yordi Rosado (Unicable) y Miembros al Aire (Unicable), entre otros.")
-Event.create(speaker_id: 6, day_id: 1, time: "18:00 - 19:00", slot: 3, name: "AUTOESTIMA SEXUAL", description: "Aprenderás herramientas poderosas para retomar tu poder como mujer y atraer mas amor en tu vida. Descubrirás los diferentes colores del amor que son parte de tu ser, además de cómo utilizarlos para ser una mujer íntegra y relacionarte de una manera más saludable.")
+Event.create(speaker_id: 6, day_id: 1, time: "18:00 - 19:00", slot: 3, name: "SEXUALIDAD, EL PLACER DE LO PROHIBIDO", description: "Aprenderás herramientas poderosas para retomar tu poder como mujer y atraer mas amor en tu vida. Descubrirás los diferentes colores del amor que son parte de tu ser, además de cómo utilizarlos para ser una mujer íntegra y relacionarte de una manera más saludable.")
 
 Speaker.create(first_name: "NATHALY", last_name: "MARCUS", category_id: 1, description: "NUTRIÓLOGA, DIRECTORA DE BIENESTA", bio: "Licenciada en Nutrición y Ciencia de los Alimentos, desde siempre se sintió atraída por la prevención, el autocuidado y la sanación integral. Dirige BIENESTA, Centro de Salud Integral basado en la Medicina Funcional.")
 Speaker.create(first_name: "SHULAMIT", last_name: "GRABER", category_id: 1, description: "PSICÓLOGA, TERAPEUTA Y AUTORA", bio: "Psicóloga clínica y terapeuta de pareja y familiar con más de 25 años de experiencia. Ha impartido diversos talleres y conferencias. Escribió el libro testimonial \"Agonía en la Incertidumbre\", con la idea de que las personas pueden resignificar sus vivencias.")
@@ -54,4 +54,37 @@ Event.create(speaker_id: 13, day_id: 2, time: "17:00 - 18:00", slot: 13, name: "
 
 Speaker.create(first_name: "MAR", last_name: "ABASCAL", category_id: 1, description: "PUBLISHER", bio: "Publisher de revistas femeninas en México y Latinoamérica en Editorial Televisa, teniendo a su cargo los títulos de Vanidades, Marie Claire, Vanidades novias y Grazia.")
 Event.create(speaker_id: 14, day_id: 1, time: "16:00 - 17:00", slot: 1, name: "10 REGLAS DE MODA Y BELLEZA PARA LUCIR IMPECABLE", description: "Mar nos comparte increíbles tips que podemos aplicar para tener una imágen segura y atractiva. ¡No te pierdas sus consejos!")
+
+Speaker.create(first_name: "CHRISTINA", last_name: "BERTON", category_id: 1, description: "FUNDADORA DE AMARA FUNDACIÓN PRO AUTOESTIMA", bio: "Fundadora de Amara Fundación Pro Autoestima, también Directora y Asesora Global del Proyecto Dove para la Autoestima en México. Es una mujer apasionada y comprometida con la labor de promover una alta autoestima.")
+Event.create(speaker_id: 15, day_id: 2, time: "12:00 - 13:00", slot: 8, name: "LIBERANDO ESTEREOTIPOS", description: "En esta conferencia Christina invita a los participantes a una reflexión personal sobre imagen corporal, autoestima  y el impacto de los medios sobre ambas, buscando dejar un mensaje de auto afirmación a través de ejercicios de auto descubrimiento que revisan las creencias limitantes y los estereotipos de belleza.")
+Workshop.create(title: "CRECIENDO JUNTOS", category_id: 6, speaker_id: 15, day_id: 1, time: "18:00 - 19:00", slot: 3, description: "Exploraremos el poder de la energía sexual en nuestro cuerpo a través del baile y el movimiento. Con estas herramientas armonizaremos nuestro cuerpo despertando nuestros sentidos y liberando emociones para lograr que la energía orgásmica circule.")
+
+Speaker.create(first_name: "LIZZY", last_name: "CANCINO", category_id: 1, description: "EMPRESARIA, SOCIA DE JERRY ML", bio: "Empresaria exitosa con más de 20 años de trayectoria en promoción artística y desarrollando estrategias para consolidar carreras artísticas. Socia de Jerry ML, una agencia consolidada y exitosa con 9 años de trayectoria.")
+Event.create(speaker_id: 16, day_id: 1, time: "19:00 - 20:00", slot: 4, name: "DESARROLLANDO TALENTOS", description: "En esta plática Lizzy nos hablará sobre su experiencia en el mundo artístico y como se desarrolla al artista para poder llegar al éxito.")
+
+Speaker.create(first_name: "ANA VICTORIA", last_name: "GARCIA", category_id: 1, description: "FUNDADORA Y DIRECTORA DE V147", bio: "Ana Victoria es fundadora y Directora General de la organización Victoria 147, la cual es una plataforma de aceleración y networking que se enfoca en el desarrollo y empoderamiento de la mujer emprendedora y ejecutiva en México.")
+Event.create(speaker_id: 17, day_id: 2, time: "10:00 - 11:00", slot: 6, name: "CÓMO EMPRENDER Y NO MORIR EN EL INTENTO", description: "En este panel Ana Victoria nos presentará a algunas de las emprendedoras de V147, quienes compartirán sus experiencias y claves de éxito.")
+
+#TBD
+Speaker.create(first_name: "TBD", last_name: "", category_id: 7)
+Event.create(speaker_id: 18, day_id: 2, time: "09:00 - 10:00", slot: 5, name: "TBD")
+Event.create(speaker_id: 18, day_id: 2, time: "13:00 - 14:00", slot: 9, name: "TBD")
+Event.create(speaker_id: 18, day_id: 2, time: "15:00 - 16:00", slot: 11, name: "LUNCH")
+
+Speaker.create(first_name: "NATALIA", last_name: "LÓPEZ", category_id: 1)
+Event.create(speaker_id: 19, day_id: 2, time: "14:00 - 15:00", slot: 10, name: "LOS VALORES DE LA MUJER MEXICANA")
+
+Speaker.create(first_name: "ABASEH", last_name: "MIRVALI", category_id: 1)
+Event.create(speaker_id: 20, day_id: 3, time: "12:00 - 13:00", slot: 19, name: "PANEL DE CULTURA")
+
+Speaker.create(first_name: "Jorge Lestrade, Mónica Patiño, Elena Reygadas,", last_name: "Ixchel Ornelas y Josefina Santacruz", category_id: 7)
+Event.create(speaker_id: 21, day_id: 3, time: "13:00 - 14:00", slot: 20, name: "PANEL DE GASTRONOMÍA", subtitle: "EL PAPEL DE LA MUJER EN LA COCINA CONTEMPORÁNEA")
+
+#Workshops
+
+Speaker.create(first_name: "SONIA", last_name: "ARIAS", category_id: 2, description: "FUNDADORA Y DIRECTORA DE V147", bio: "Desde los ocho años comenzó su interés por la repostería. Realizó sus estudios en el Culinary Institute of America en Nueva York. Actualmente está al frente de la repostería del Restaurante Jaso, considerado como uno de los mejores restaurantes en México.")
+Workshop.create(title: "PASTEL DE LA A A LA Z", speaker_id: 22, category_id: 2, day_id: 3, time: "13:00 - 14:00", slot: 13, description: "Exploraremos el poder de la energía sexual en nuestro cuerpo a través del baile y el movimiento. Con estas herramientas armonizaremos nuestro cuerpo despertando nuestros sentidos y liberando emociones para lograr que la energía orgásmica circule.")
+
+
+
 
