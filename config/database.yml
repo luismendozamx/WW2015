@@ -49,6 +49,6 @@ test:
 #
 production:
   <<: *default
-  database: WW_2015_production
-  username: WW2015
-  password: <%= ENV['WW2015_DATABASE_PASSWORD'] %>
+  database: rails
+  username: rails
+  password: <%= ENV['DATABASE_PASSWORD'] %>
