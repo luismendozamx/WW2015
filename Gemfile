@@ -31,3 +31,4 @@ gem 'font-awesome-rails'
 gem 'mini_magick'
 gem 'refile', require: ['refile/rails', 'refile/image_processing']
 gem 'unicorn'
+gem "aws-sdk", '< 2'
