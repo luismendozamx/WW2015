@@ -28,13 +28,13 @@
           <li><%= link_to "Ponentes", ponentes_path %></li>
           <li><%= link_to "Agenda", agenda_path %></li>
           <li><%= link_to "Showrooms", showrooms_path %></li>
-          <li><%= link_to "Banamex", banamex_path %></li>
+          <!-- <li><%= link_to "Banamex", banamex_path %></li> -->
           <li><%= link_to "2014", last_year_path %></li>
           <% if user_signed_in? %>
               <li><%= link_to "Mis Eventos", edit_user_registration_path %></li>
               <li><%= link_to "Log Out", logout_path, class: "btn btn-success" %></li>
             <% else %>
-              <li><%= link_to "Regístrate", register_path, class: "btn btn-success" %></li>
+              <!--<li><%= link_to "Regístrate", register_path, class: "btn btn-success" %></li> -->
             <% end %>
         </ul>
       </div>
