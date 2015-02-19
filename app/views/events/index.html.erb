@@ -111,32 +111,80 @@
       <div class="row day-nav">
         <div class="col-sm-12">
           <ul class="nav nav-pills nav-justified" role="tablist">
-            <li role="presentation" class="active"><a href="#day1w" role="tab" data-toggle="tab">Viernes </a></li>
+            <li role="presentation" class="active"><a href="#day1w" role="tab" data-toggle="tab">Viernes 6</a></li>
             <li role="presentation"><a href="#day2w" role="tab" data-toggle="tab">Sábado 7</a></li>
             <li role="presentation"><a href="#day3w" role="tab" data-toggle="tab">Domingo 8</a></li>
           </ul>
         </div>
       </div>
 
-      <div class="tab-content">
+      <div id="workshop-calendar" class="tab-content">
+
+        <div class="row titles">
+          <div class="col-xs-4"></div>
+          <div class="col-xs-8"> 
+            <div class="col-xs-3">
+              <p class="center">FITNESS</p>
+            </div>
+            <div class="col-xs-3">
+              <p class="center">COOKING</p>
+            </div>
+            <div class="col-xs-3">
+              <p class="center">WELLNESS</p>
+            </div>
+            <div class="col-xs-3">
+              <p class="center">SELF-AWERNESS</p>
+            </div>
+          </div>
+        </div>
 
         <div role="tabpanel" class="tab-pane active" id="day1w">
-        <% Day.find(1).workshops.order('slot ASC').each do |workshop| %>
-          <div class="row event">
-            <div class="col-xs-2 time">
+
+          <div class="col-xs-4">
+            <div class="time">
               <div class="content">
-                <p class="center"><%= workshop.time %></p>
+                <p class="center">16:00 - 17:00</p>
               </div>
             </div>
-
-            <div class="col-xs-10 info">
+            <div class="time">
               <div class="content">
-                <p class="center name"><%= workshop.title %></p>
-                <p class="center speaker"><%= workshop.speaker.full_name %></p>
+                <p class="center">17:00 - 18:00</p>
+              </div>
+            </div>
+            <div class="time">
+              <div class="content">
+                <p class="center">18:00 - 19:00</p>
+              </div>
+            </div>
+            <div class="time">
+              <div class="content">
+                <p class="center">19:00 - 20:00</p>
               </div>
             </div>
           </div>
-        <% end %>
+
+          <div class="col-xs-2 column">
+            <% Day.find(1).workshops.where(category_id: 3).order('slot ASC').each do |workshop| %>
+              <div class="info">
+                <div class="content">
+                  <p class="center name"><%= workshop.title %></p>
+                  <p class="center speaker"><%= workshop.speaker.full_name %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
+          <div class="col-xs-2 column">
+            <% Day.find(1).workshops.where(category_id: 2).order('slot ASC').each do |workshop| %>
+              <div class="info">
+                <div class="content">
+                  <p class="center name"><%= workshop.title %></p>
+                  <p class="center speaker"><%= workshop.speaker.full_name %></p>
+                </div>
+              </div>
+            <% end %>
+          </div>
+
         </div>
 
         <div role="tabpanel" class="tab-pane" id="day2w">

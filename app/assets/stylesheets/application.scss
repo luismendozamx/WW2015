@@ -14,10 +14,12 @@
  *= require_self
  *= require owl.carousel
  *= require owl.theme
+ *= require font-awesome
  */
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "font-awesome";
 @import "_general.css.scss";
 
 #main-nav{
@@ -463,6 +465,7 @@ footer{
 
   .time{
     color: #fff;
+    padding-left: 18px;
 
     .content{
       background-color: $secondary-color;
@@ -514,6 +517,35 @@ footer{
         margin: 0px;
       }
     } 
+  }
+
+  #workshop-calendar{
+
+    .time{
+      padding-left: 0px;
+    }
+
+    .col-xs-4{
+      padding-left: 3px;
+    }
+
+    .col-xs-8{
+      padding: 0px;
+    }
+
+    .titles{
+      .col-xs-3{
+        padding: 0px;
+      }
+    }
+
+    .col-xs-2{
+      padding: 0px;
+    }
+
+    .info{
+      margin-bottom: 7px;
+    }
   }
 }
 
