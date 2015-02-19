@@ -11,7 +11,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(1).speakers.each do |speaker| %>
+    <% Category.find(1).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
@@ -52,7 +52,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(2).speakers.each do |speaker| %>
+    <% Category.find(2).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
@@ -93,7 +93,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(3).speakers.each do |speaker| %>
+    <% Category.find(3).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
@@ -134,7 +134,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(4).speakers.each do |speaker| %>
+    <% Category.find(4).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
@@ -175,7 +175,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(5).speakers.each do |speaker| %>
+    <% Category.find(5).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
@@ -216,7 +216,7 @@
 
 <div class="container">
   <div id="ponentes-agenda" class="row">
-    <% Category.find(6).speakers.each do |speaker| %>
+    <% Category.find(6).speakers.order('id ASC').each do |speaker| %>
       <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="content">
