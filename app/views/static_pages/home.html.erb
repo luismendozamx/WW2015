@@ -53,7 +53,7 @@
     <div class="row-fluid">
 
       <% @speaker = Speaker.find(1) %>
-      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= attachment_url(@speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -63,7 +63,7 @@
       </div>
 
       <% @speaker = Speaker.find(2) %>
-      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= attachment_url(@speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -73,17 +73,7 @@
       </div>
 
       <% @speaker = Speaker.find(3) %>
-      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
-        <div class="overlay">
-          <div class="ponente-info">
-            <h3 class="center"><%= @speaker.full_name %></h3>
-            <p class="center"><%= @speaker.description %></p>
-          </div>
-        </div>
-      </div>
-
-      <% @speaker = Speaker.find(4) %>
-      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= attachment_url(@speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -93,7 +83,17 @@
       </div>
 
       <% @speaker = Speaker.find(5) %>
-      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= asset_path 'experta.jpg' %>)">
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= attachment_url(@speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="ponente-info">
+            <h3 class="center"><%= @speaker.full_name %></h3>
+            <p class="center"><%= @speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <% @speaker = Speaker.find(15) %>
+      <div class="col-md-4 col-sm-6 ponente" style="background-image:url(<%= attachment_url(@speaker, :profile_image) %>)">
         <div class="overlay">
           <div class="ponente-info">
             <h3 class="center"><%= @speaker.full_name %></h3>
@@ -104,7 +104,7 @@
 
       <div class="col-md-4 col-sm-6 ponente-mas">
         <div class="link">
-          <h3 class="center"><%= link_to "Más >>", speakers_path %></h3>
+          <h3 class="center"><%= link_to "Más >>", ponentes_path %></h3>
         </div>
       </div>
 

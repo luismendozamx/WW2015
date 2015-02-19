@@ -4,6 +4,8 @@ class Speaker < ActiveRecord::Base
 
   validates :first_name, presence: true
 
+  attachment :profile_image
+
   # Friendly Id
   extend FriendlyId
   friendly_id :full_name, use: :slugged

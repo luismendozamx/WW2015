@@ -1,0 +1,246 @@
+
+<section id="intro-ponentes">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">EXPERTAS <span>2015</span></h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(1).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>
+
+<section class="titulo-rosa">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">COOKING</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(2).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>
+
+<section class="titulo-verde">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">FITNESS</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(3).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>
+
+<section class="titulo-rosa">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">WELLNESS</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(4).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>
+
+<section class="titulo-verde">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">BUSINESS</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(5).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>
+
+<section class="titulo-rosa">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h1 class="">SELF AWERNESS</h1>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="container">
+  <div id="ponentes-agenda" class="row">
+    <% Category.find(6).speakers.each do |speaker| %>
+      <div class="col-md-3 col-sm-4 col-xs-6 ponente-list rosa" style="background-image:url(<%= attachment_url(speaker, :profile_image) %>)">
+        <div class="overlay">
+          <div class="content">
+            <h3 class="center"><a href="#<%= speaker.slug %>" data-toggle="modal"><%= speaker.full_name %></a></h3>
+            <p class="description"><%= speaker.description %></p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal -->
+      <div class="modal fade" id="<%= speaker.slug %>" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+              <h4 class="modal-title center"><%= speaker.full_name %></h4>
+            </div>
+            <div class="modal-body">
+              <p class="description"><%= speaker.bio %></p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Modal -->
+    <% end %>
+  </div>
+</div>

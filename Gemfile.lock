@@ -68,6 +68,7 @@ GEM
     mail (2.6.3)
       mime-types (>= 1.16, < 3)
     mime-types (2.4.3)
+    mini_magick (4.0.3)
     minitest (5.5.1)
     multi_json (1.10.1)
     mysql2 (0.3.17)
@@ -75,6 +76,8 @@ GEM
     owlcarousel-rails (1.1.3.3)
       jquery-rails
     rack (1.5.2)
+    rack-protection (1.5.3)
+      rack
     rack-test (0.6.3)
       rack (>= 1.0)
     rails (4.1.6)
@@ -95,6 +98,9 @@ GEM
     rake (10.4.2)
     rdoc (4.2.0)
       json (~> 1.4)
+    refile (0.5.3)
+      mime-types
+      sinatra (~> 1.4.5)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.2.19)
@@ -109,6 +115,10 @@ GEM
     simple_form (3.1.0)
       actionpack (~> 4.0)
       activemodel (~> 4.0)
+    sinatra (1.4.5)
+      rack (~> 1.4)
+      rack-protection (~> 1.4)
+      tilt (~> 1.3, >= 1.3.4)
     spring (1.2.0)
     sprockets (2.12.3)
       hike (~> 1.2)
@@ -145,9 +155,11 @@ DEPENDENCIES
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
   jquery-rails
+  mini_magick
   mysql2
   owlcarousel-rails
   rails (= 4.1.6)
+  refile
   sass-rails (~> 4.0.3)
   sdoc (~> 0.4.0)
   simple_form

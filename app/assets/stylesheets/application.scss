@@ -78,6 +78,15 @@ footer{
   width: 100%;
   height: 200px;
   background-color: $dark-color;
+
+  .row{
+    padding-top: 40px;
+  }
+
+  .logo-footer{
+    float: left;
+    width: 100px;
+  }
 }
 
 #login{
@@ -280,6 +289,19 @@ footer{
     border: 0px;
   }
 
+  .ponente-list.rosa{
+    .overlay{
+      background-color: rgba(238, 71, 93, 0.5);
+    }
+
+    &:hover{
+      .overlay{
+        background-color: rgba(238, 71, 93, 0.2);
+        @include transition(all 0.3s ease-in);
+      }
+    }
+  }
+
   .ponente-list{
     background-size: cover;
     background-position: center center;
@@ -318,6 +340,26 @@ footer{
     }
   }
 
+}
+
+.titulo-rosa{
+  width: 100%;
+  background-color: $primary-color;
+  color: #fff;
+
+  h1{
+    padding: 20px 0px;
+  }
+}
+
+.titulo-verde{
+  width: 100%;
+  background-color: $secondary-color;
+  color: #fff;
+
+  h1{
+    padding: 20px 0px;
+  }
 }
 
 #showrooms-intro{
@@ -521,30 +563,61 @@ footer{
 
   #workshop-calendar{
 
-    .time{
-      padding-left: 0px;
-    }
-
-    .col-xs-4{
-      padding-left: 3px;
-    }
-
-    .col-xs-8{
-      padding: 0px;
-    }
-
-    .titles{
-      .col-xs-3{
-        padding: 0px;
-      }
-    }
-
-    .col-xs-2{
+    .column{
       padding: 0px;
     }
 
     .info{
-      margin-bottom: 7px;
+      margin-top: 5px;
+      margin-bottom: 5px;
+
+      .content{
+        padding-left: 10px;
+        padding-right: 10px;
+      }
+
+      .block{
+        background-color: lighten($primary-color, 10%);
+      }
+
+      .l-1{
+        height: 100px;
+        font-size: 12px;
+      }
+      .l-2{
+        height: 200px;
+      }
+      .l-3{
+        height: 150px;
+      }
+      .l-4{
+        height: 50px;
+      }
+
+      @media only screen and (max-width: 778px){
+        p{
+          font-size: 10px;
+        }
+        .l-1{
+          height: 200px;
+        }
+        .l-2{
+          height: 400px;
+        }
+        .l-3{
+          height: 300px;
+        }
+        .l-4{
+          height: 100px;
+        }
+      }
+
+      .time-w{
+        color: $secondary-color;
+        margin: 0px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
     }
   }
 }

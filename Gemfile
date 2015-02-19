@@ -22,3 +22,5 @@ gem 'bootstrap-will_paginate'
 gem 'friendly_id', '~> 5.1.0'
 gem 'owlcarousel-rails'
 gem 'font-awesome-rails'
+gem 'mini_magick'
+gem 'refile', require: ['refile/rails', 'refile/image_processing']

@@ -10,4 +10,10 @@ class StaticPagesController < ApplicationController
 
   def banamex
   end
+
+  def ponentes
+  end
+
+  def agenda
+  end
 end

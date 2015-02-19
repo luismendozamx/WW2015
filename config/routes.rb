@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get '2014', to: 'static_pages#a2014', as: :last_year
   get 'banamex', to: 'static_pages#banamex', as: :banamex
   get 'showrooms', to: 'static_pages#showrooms', as: :showrooms
+  get 'ponentes', to: 'static_pages#ponentes', as: :ponentes
+  get 'agenda', to: 'static_pages#agenda', as: :agenda
 
   devise_for :users
 

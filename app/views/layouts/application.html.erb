@@ -25,8 +25,8 @@
 
       <div class="collapse navbar-collapse" id="nav-collapse">
         <ul class="nav navbar-nav navbar-right">
-          <li><%= link_to "Ponentes", speakers_path %></li>
-          <li><%= link_to "Agenda", events_path %></li>
+          <li><%= link_to "Ponentes", ponentes_path %></li>
+          <li><%= link_to "Agenda", agenda_path %></li>
           <li><%= link_to "Showrooms", showrooms_path %></li>
           <li><%= link_to "Banamex", banamex_path %></li>
           <li><%= link_to "2014", last_year_path %></li>
@@ -64,7 +64,9 @@
 
   <footer>
     <div class="container">
-      
+      <div class="row">
+        <%= link_to image_tag("logo-nav.png", class: "img-responsive logo-nav"), root_path, class: "logo-footer" %>
+      </div>
     </div>
   </footer>
 
