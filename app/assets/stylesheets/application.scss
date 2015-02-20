@@ -85,7 +85,19 @@ footer{
 
   .logo-footer{
     float: left;
-    width: 100px;
+    width: 60px;
+  }
+
+  a{
+    i{
+      color: #eee;
+      float: right;
+      padding: 10px 15px;
+
+      &:hover{
+        color: $primary-color;
+      }
+    }
   }
 }
 
@@ -670,6 +682,29 @@ footer{
     .subtext{
       font-size: 16px;
       color: darken(#eee, 30%);
+    }
+
+    a{
+      color: $secondary-color;
+    }
+  }
+
+  table{
+    font-size: 18px;
+    text-align: center;
+
+    thead{
+      font-weight: 500;
+    }
+
+    p{
+      font-size: 18px;
+    }
+
+
+
+    .img-restaurante{
+      width: 100px;
     }
   }
 }
