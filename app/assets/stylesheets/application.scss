@@ -668,16 +668,18 @@ footer{
     padding-bottom: 30px;
   }
 
+  .col-xs-6{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
   .tag-banamex{
     color: #fff;
     padding-top: 50px;
     padding-bottom: 50px;
-    @include linear-gradient(#115c8e, #004981);
-  }
-
-  .col-xs-6{
-    padding-right: 0px;
-    padding-left: 0px;
+    padding-right: 15px;
+    padding-left: 15px;
+    @include linear-gradient(#115c8e, lighten(#004981, 5%));
   }
 
   .img-banamex{
