@@ -20,14 +20,20 @@
 $(document).on('ready page:load', function () {
   $(document).ready( function(){
     ajustaPonentes();
+    ajustaBanamex();
     $("#showroom-carousel").owlCarousel({
       singleItem: true,
       slideSpeed : 300
     });
+    $("#banamex-carousel").owlCarousel({
+      singleItem: true
+    });
+    
   });
 
   $(window).resize( function(){
     ajustaPonentes();
+    ajustaBanamex();
   });
 });
 
@@ -53,6 +59,10 @@ function ajustaPonentes(){
     $(arr[i]).children().children().css("padding-bottom", (max - height)/2 + "px" );
     
   }
+}
+
+function ajustaBanamex(){
+  $('.img-banamex').height( $('.tag-banamex').height() + 100 );
 }
 
 

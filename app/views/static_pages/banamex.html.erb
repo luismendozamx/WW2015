@@ -1,8 +1,24 @@
 <section id="intro-banamex">
-  <div class="row">
-    <div class="col-sm-8 col-sm-offset-2">
-      <%= image_tag "sponsors/sponsor-09.png", class: "img-responsive center" %>
-      <h1 class="center">Disfruta de todos los beneficios exclusivos que tenemos para ti por ser cliente Banamex</h1>
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-xs-6">
+        <div id="banamex-carousel" class="owl-carouserl">
+          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-1.jpg') %>')">
+          
+          </div>
+          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-2.jpg') %>')">
+          
+          </div>
+          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-3.jpg') %>')">
+          
+          </div>
+        </div>
+      </div>
+      
+      <div class="col-xs-6 tag-banamex">
+        <h1 class="center">Disfruta de todos los beneficios exclusivos que tenemos para ti por ser cliente Banamex</h1>
+        <%= image_tag "banamex-blanco.png", class: "img-responsive center" %>
+      </div>
     </div>
   </div>
 </section>
@@ -13,12 +29,12 @@
       <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
 
         <div class="panel panel-default">
-          <div class="panel-heading green" role="tab" id="headingOne">
-            <h1 class="panel-title">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h2 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                 Asientos preferenciales dentro de la Fila Banamex en los talleres y conferencias
               </a>
-            </h1>
+            </h2>
           </div>
           <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
@@ -30,11 +46,11 @@
 
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingOne">
-            <h1 class="panel-title">
+            <h2 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
                 Servicio de Concierge
               </a>
-            </h1>
+            </h2>
           </div>
           <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
@@ -44,12 +60,12 @@
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading green" role="tab" id="headingOne">
-            <h1 class="panel-title">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h2 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
                 Promociones en restaurantes aledaños
               </a>
-            </h1>
+            </h2>
           </div>
           <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
@@ -62,11 +78,11 @@
 
         <div class="panel panel-default">
           <div class="panel-heading" role="tab" id="headingOne">
-            <h1 class="panel-title">
+            <h2 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
                 Si eres emprendedora y tienes un negocio, conoce iAcepta
               </a>
-            </h1>
+            </h2>
           </div>
           <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">
@@ -77,12 +93,12 @@
         </div>
 
         <div class="panel panel-default">
-          <div class="panel-heading green" role="tab" id="headingOne">
-            <h1 class="panel-title">
+          <div class="panel-heading" role="tab" id="headingOne">
+            <h2 class="panel-title">
               <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
                 No olvides asistir a las conferencias y workshops que preparamos para ti: 
               </a>
-            </h1>
+            </h2>
           </div>
           <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
             <div class="panel-body">

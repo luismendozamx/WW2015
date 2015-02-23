@@ -656,16 +656,48 @@ footer{
 }
 
 #intro-banamex{
+  padding-bottom: 40px;
+
+  h1, h2, h3, h4, h5, p, a{
+    font-family: 'Interstate' !important;
+  }
+  
+
   h1{
     padding-top: 30px;
     padding-bottom: 30px;
   }
+
+  .tag-banamex{
+    color: #fff;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    @include linear-gradient(#115c8e, #004981);
+  }
+
+  .col-xs-6{
+    padding-right: 0px;
+    padding-left: 0px;
+  }
+
+  .img-banamex{
+    background-size: cover;
+    background-position: center center;
+  }
 }
 
 #beneficios{
+  h1, h2, h3, h4, h5, p, a{
+    font-family: 'Interstate' !important;
+  }
 
   .panel-heading{
-    background-color: $primary-color;
+    @include linear-gradient(#115c8e, #004981);
+
+    &:hover{
+      
+      @include linear-gradient(#fead48, #ff9534);
+    }
   }
 
   .panel-heading.green{
@@ -681,6 +713,7 @@ footer{
   .panel-body{
     p{
       font-size: 20px;
+      color: #115c8e;
     }
 
     .subtext{
@@ -689,7 +722,7 @@ footer{
     }
 
     a{
-      color: $secondary-color;
+      color: #fead48;
     }
   }
 
