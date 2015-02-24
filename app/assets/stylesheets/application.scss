@@ -498,14 +498,20 @@ footer{
 
 }
 
-.modal-workshop{
+.button-workshop{
   .btn-registro,
   .btn-w-registro,
   .btn-create,
   .btn-delete{
-    width: 50%;
-    padding-top: 10px;
-    padding-bottom: 10px;
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    @media only screen and (max-width: 778px){
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 9px;
+    }
   }
 }
 
@@ -561,6 +567,8 @@ footer{
   }
 }
 
+
+
 #agenda{
   padding-top: 30px;
   padding-bottom: 30px;
@@ -568,6 +576,17 @@ footer{
   p, a{
     @media only screen and (max-width: 778px){
       font-size: 10px;
+    }
+  }
+
+  .legend{
+    p{
+      color: darken(#eee, 40%);
+      font-size: 16px;
+
+      @media only screen and (max-width: 778px){
+        font-size: 14px;
+      }
     }
   }
 
@@ -723,17 +742,16 @@ footer{
       }
 
       .l-1{
-        height: 100px;
-        font-size: 12px;
-      }
-      .l-2{
         height: 200px;
       }
+      .l-2{
+        height: 400px;
+      }
       .l-3{
-        height: 150px;
+        height: 300px;
       }
       .l-4{
-        height: 50px;
+        height: 100px;
       }
 
       @media only screen and (max-width: 778px){

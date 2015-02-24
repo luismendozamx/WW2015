@@ -12,6 +12,9 @@
     <p class="center time-w"><%= @workshop.time %></p>
     <a href="#workshop-modal-<%= @workshop.id %>" data-toggle="modal"><p class="center name"><%= @workshop.title %></p></a>
     <p class="center speaker"><%= @workshop.speaker.full_name %></p>
+    <div class="button-workshop">
+      <%= render 'shared/workshop_subscribe_form' %>
+    </div>
   </div>
 </div>
 
@@ -29,9 +32,6 @@
         <% if @workshop.description %>
           <p class="center"><%= @workshop.description %></p>
         <% end %>
-        <div class="modal-workshop">
-          <%= render 'shared/workshop_subscribe_form' %>
-        </div>
       </div>
     </div>
   </div>
