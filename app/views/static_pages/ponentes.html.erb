@@ -30,6 +30,7 @@
               <h4 class="modal-title center"><%= speaker.full_name %></h4>
             </div>
             <div class="modal-body">
+              <%= attachment_image_tag(speaker, :profile_image, :fill, 300, 300, class: "img-responsive img-circle center speaker-profile") %>
               <p class="description"><%= speaker.bio %></p>
             </div>
           </div>
