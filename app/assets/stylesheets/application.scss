@@ -498,6 +498,69 @@ footer{
 
 }
 
+.modal-workshop{
+  .btn-registro,
+  .btn-w-registro,
+  .btn-create,
+  .btn-delete{
+    width: 50%;
+    padding-top: 10px;
+    padding-bottom: 10px;
+  }
+}
+
+.btn-registro{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  @media only screen and (max-width: 778px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.btn-w-registro{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  @media only screen and (max-width: 778px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &:hover{
+    color: #fff;
+  }
+}
+
+.btn-create{
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  &:hover{
+    color: #fff;
+    background-color: lighten($secondary-color, 5%);
+  }
+}
+
+.btn-delete{
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover{
+    color: #fff;
+    background-color: lighten($primary-color, 5%);
+  }
+}
+
 #agenda{
   padding-top: 30px;
   padding-bottom: 30px;
@@ -505,38 +568,6 @@ footer{
   p, a{
     @media only screen and (max-width: 778px){
       font-size: 10px;
-    }
-  }
-
-  .btn-registro{
-    width: 100%;
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: #fff;
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-
-    @media only screen and (max-width: 778px){
-      padding-top: 30px;
-      padding-bottom: 30px;
-    }
-  }
-
-  .btn-create{
-    background-color: $secondary-color;
-    border-color: $secondary-color;
-
-    &:hover{
-      background-color: lighten($secondary-color, 5%);
-    }
-  }
-
-  .btn-delete{
-    background-color: $primary-color;
-    border-color: $primary-color;
-
-    &:hover{
-      background-color: lighten($primary-color, 5%);
     }
   }
 
@@ -639,6 +670,12 @@ footer{
         font-weight: 500;
       }
     } 
+  }
+
+  .w-registered{
+    .content{
+      background-color: rgba(0, 183, 159, 0.3);
+    }
   }
 
   .lunch{

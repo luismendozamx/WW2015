@@ -5,6 +5,7 @@ Rails.application.routes.draw do
   resources :speakers
   resources :events
   resources :event_subscriptions, only: [:create, :destroy]
+  resources :workshop_subscriptions, only: [:create, :destroy]
 
   get 'static_pages/home'
   get '2014', to: 'static_pages#a2014', as: :last_year

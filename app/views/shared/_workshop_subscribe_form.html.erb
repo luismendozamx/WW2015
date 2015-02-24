@@ -1,0 +1,13 @@
+<% if user_signed_in? %>
+  <div class="w-subscribe-form" id="workshop-<%= @workshop.id %>">
+    <% if current_user.workshop_subscribed?(@workshop) %>
+      <%= render 'shared/leave_workshop_button' %>
+    <% else %>
+      <%= render 'shared/register_workshop_button' %>
+    <% end %>
+  </div>
+<% else %>
+  <div class="center">
+    <%= link_to "Regístrate", register_path, class: "btn btn-default btn-w-registro" %>
+  </div>
+<% end %>
