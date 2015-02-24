@@ -26,7 +26,10 @@ $(document).on('ready page:load', function () {
       slideSpeed : 300
     });
     $("#banamex-carousel").owlCarousel({
-      singleItem: true
+      singleItem: true,
+      autoPlay: true,
+      pagination: false,
+      slideSpeed: 300
     });
     
   });

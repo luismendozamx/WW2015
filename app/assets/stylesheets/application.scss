@@ -661,12 +661,16 @@ footer{
 }
 
 #intro-banamex{
+  padding-top: 40px;
   padding-bottom: 40px;
 
   h1, h2, h3, h4, h5, p, a{
-    font-family: 'Interstate' !important;
+    font-family: 'Interstate';
   }
   
+  .radius{
+    border-bottom-left-radius: 5px;
+  }
 
   h1{
     padding-top: 30px;
@@ -684,22 +688,26 @@ footer{
     padding-bottom: 50px;
     padding-right: 15px;
     padding-left: 15px;
-    @include linear-gradient(#115c8e, lighten(#004981, 5%));
+    @include linear-gradient(#00bdf2, lighten(#004785, 1%));
+    border-bottom-right-radius: 30px;
+    border-top-right-radius: 30px;
   }
 
   .img-banamex{
     background-size: cover;
     background-position: center center;
+    border-bottom-left-radius: 30px;
+    border-top-left-radius: 30px;
   }
 }
 
 #beneficios{
   h1, h2, h3, h4, h5, p, a{
-    font-family: 'Interstate' !important;
+    font-family: 'Interstate';
   }
 
   .panel-heading{
-    @include linear-gradient(#115c8e, #004981);
+    @include linear-gradient(#115c8e, lighten(#004981, 5%));
 
     &:hover{
       
@@ -715,20 +723,30 @@ footer{
     font-size: 28px;
     text-align: center;
     color: #fff;
+
+    a{
+      font-family: 'Arial';
+      font-size: 21px;
+    }
+
+    
   }
 
   .panel-body{
     p{
       font-size: 20px;
+      font-family: 'Arial';
       color: #115c8e;
     }
 
     .subtext{
       font-size: 16px;
       color: darken(#eee, 30%);
+      font-family: 'Arial';
     }
 
     a{
+      font-family: 'Arial';
       color: #fead48;
     }
   }
