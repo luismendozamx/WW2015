@@ -16,4 +16,7 @@ class StaticPagesController < ApplicationController
 
   def agenda
   end
+
+  def myevents
+  end
 end

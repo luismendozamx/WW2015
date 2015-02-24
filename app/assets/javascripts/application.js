@@ -38,6 +38,11 @@ $(document).on('ready page:load', function () {
     ajustaPonentes();
     ajustaBanamex();
   });
+
+  $('.subscribe-form').click( function(){
+    console.log( $(this) );
+    window.current_event = $(this);
+  })
 });
 
 function ajustaPonentes(){

@@ -1,9 +1,10 @@
 Rails.application.routes.draw do
-  
+
   resources :workshops
   resources :locations
   resources :speakers
   resources :events
+  resources :event_subscriptions, only: [:create, :destroy]
 
   get 'static_pages/home'
   get '2014', to: 'static_pages#a2014', as: :last_year
@@ -11,6 +12,7 @@ Rails.application.routes.draw do
   get 'showrooms', to: 'static_pages#showrooms', as: :showrooms
   get 'ponentes', to: 'static_pages#ponentes', as: :ponentes
   get 'agenda', to: 'static_pages#agenda', as: :agenda
+  get 'mis_eventos', to: 'static_pages#myevents', as: :my_events
 
   devise_for :users
 

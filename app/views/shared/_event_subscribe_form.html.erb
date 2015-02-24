@@ -1,0 +1,11 @@
+<% if user_signed_in? %>
+  <div class="subscribe-form" id="event-<%= @event.id %>">
+    <% if current_user.subscribed?(@event) %>
+      <%= render 'shared/leave_button' %>
+    <% else %>
+      <%= render 'shared/register_button' %>
+    <% end %>
+  </div>
+<% else %>
+  <%= link_to "Regístrate", register_path, class: "btn btn-default btn-registro" %>
+<% end %>

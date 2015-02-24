@@ -1,0 +1,21 @@
+<div id="agenda" class="container">
+  <div class="row">
+    <div class="col-sm-12">
+      <h1 class="center">Mis eventos</h1>
+    </div>
+  </div>
+  <div id="events" class="row">
+  <% if user_signed_in? %>
+    <% if current_user.events.count > 0 %>
+      <% current_user.events.order('slot ASC').each do |event| %>
+        <% @event = event %>
+        <%= render 'shared/myevent_info' %>
+      <% end %>
+    <% else %>
+      <h3>No tienes eventos registrados, <%= link_to "agrega eventos a tu agenda", agenda_path %>.</h3>
+    <% end %>
+  <% else %>
+    <h3 class="center"><%= link_to "Regístrate para agregar aventos", register_path %></h3>
+  <% end %>
+  </div>
+</div>
