@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
          :recoverable, :rememberable, :trackable, :validatable
 
   validates :first_name, :last_name, presence: true
+  validates :folio, presence: true, folio: true
 
   has_many :event_subscriptions
   has_many :events, through: :event_subscriptions
@@ -42,5 +43,13 @@ class User < ActiveRecord::Base
 
   def workshop_number
     self.workshops.count
+  end
+
+  def banamex?
+    if (1..250).include?(folio) || (4001..4501).include?(folio)
+      true
+    else
+      false
+    end
   end
 end

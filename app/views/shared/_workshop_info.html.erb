@@ -25,10 +25,16 @@
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title center"><%= @workshop.title %></h4>
+
       </div>
       <div class="modal-body">
+        <p class="center"><%= @workshop.day.name %>, <%= @workshop.time %></p>
+        <% if @workshop.location %>
+          <p class="center">Salón: <%= @workshop.location.name %></p>
+        <% end %>
+        <hr>
         <%= attachment_image_tag(@workshop.speaker, :profile_image, :fill, 150, 150, class: "img-responsive img-circle center speaker-profile") %>
-        <p class="center"><%= @workshop.speaker.full_name %></p>
+          <p class="center"><%= @workshop.speaker.full_name %></p>
         <% if @workshop.description %>
           <p class="center"><%= @workshop.description %></p>
         <% end %>

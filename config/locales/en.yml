@@ -20,4 +20,22 @@
 # available at http://guides.rubyonrails.org/i18n.html.
 
 en:
-  hello: "Hello world"
+  activerecord:
+    errors:
+      models:
+        user:
+          attributes:
+            email:
+              blank: "El email no puede estar vacío."
+              taken: "El email ya ha sido registrado."
+              invalid: "Email invalido"
+            password:
+              blank: "Ingresa una contraseña"
+            first_name:
+              blank: "Ingresa tu nombre"
+            last_name:
+              blank: "Ingresa tu apellido"
+            cliente_banamex:
+              blank: "Escoge una opción"
+            folio:
+              blank: "Ingresa tu número de folio"

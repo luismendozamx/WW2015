@@ -37,6 +37,13 @@
         <h4 class="modal-title center"><%= @event.name %></h4>
       </div>
       <div class="modal-body">
+        <% if @event.day %>
+          <p class="center"><%= @event.day.name %>, <%= @event.time %></p>
+        <% end %>
+        <% if @event.location %>
+          <p class="center">Salón: <%= @event.location.name %></p>
+        <% end %>
+        <hr>
         <% if @event.subtitle %>
           <p class="center"><%= @event.subtitle %></p>
         <% end %>
