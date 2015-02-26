@@ -11,7 +11,10 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150219100337) do
+ActiveRecord::Schema.define(version: 20150226181021) do
+
+  # These are extensions that must be enabled in order to support this database
+  enable_extension "plpgsql"
 
   create_table "categories", force: true do |t|
     t.string   "name"
@@ -22,6 +25,15 @@ ActiveRecord::Schema.define(version: 20150219100337) do
   create_table "days", force: true do |t|
     t.string   "name"
     t.integer  "day"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "event_subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "event_id"
+    t.string   "status"
+    t.string   "priority"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -38,6 +50,8 @@ ActiveRecord::Schema.define(version: 20150219100337) do
     t.string   "time"
     t.integer  "slot"
     t.string   "subtitle"
+    t.integer  "limit"
+    t.integer  "limit_banamex"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", using: :btree
@@ -84,6 +98,15 @@ ActiveRecord::Schema.define(version: 20150219100337) do
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
   add_index "users", ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
 
+  create_table "workshop_subscriptions", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "workshop_id"
+    t.string   "status"
+    t.string   "priority"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "workshops", force: true do |t|
     t.string   "title"
     t.text     "description"
@@ -97,6 +120,8 @@ ActiveRecord::Schema.define(version: 20150219100337) do
     t.integer  "category_id"
     t.integer  "day_id"
     t.integer  "length"
+    t.integer  "limit"
+    t.integer  "limit_banamex"
   end
 
 end
