@@ -32,3 +32,4 @@ gem 'mini_magick'
 gem 'refile', require: ['refile/rails', 'refile/image_processing']
 gem 'unicorn'
 gem "aws-sdk", '< 2'
+gem 'rails_admin', '~> 0.6.6'

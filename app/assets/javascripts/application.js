@@ -31,12 +31,21 @@ $(document).on('ready page:load', function () {
       pagination: false,
       slideSpeed: 300
     });
-    
   });
 
   $(window).resize( function(){
     ajustaPonentes();
     ajustaBanamex();
+  });
+
+  $('.subscribe-form').click( function(){
+    console.log( $(this) );
+    window.current_event = $(this);
+  });
+
+  $('.w-subscribe-form').click( function(){
+    console.log( $(this) );
+    window.current_workshop = $(this);
   });
 });
 

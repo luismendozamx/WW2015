@@ -1,0 +1,46 @@
+<div class="row event">
+  <div class="col-sm-2 col-xs-3 time">
+    <div class="content">
+      <p class="center"><%= @workshop.day.name %>, <%= @workshop.time %></p>
+    </div>
+  </div>
+
+  <% if @workshop.slot == 11 %>
+    <div class="col-sm-10 col-xs-8 lunch">
+      <div class="content">
+        <p class="center name"><%= @workshop.title %></p>
+      </div>
+    </div>
+  <% else %>
+    <div class="col-sm-8 col-xs-6 info">
+      <div class="content">
+        <a href="#event-modal-<%= @workshop.id %>" data-toggle="modal"><p class="center name"><%= @workshop.title %></p></a>
+        <p class="center speaker"><%= @workshop.speaker.full_name %></p>
+      </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-3 button">
+      <%= render 'shared/workshop_subscribe_form' %>
+    </div>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="event-modal-<%= @workshop.id %>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center"><%= @workshop.title %></h4>
+      </div>
+      <div class="modal-body">
+        <%= attachment_image_tag(@workshop.speaker, :profile_image, :fill, 150, 150, class: "img-responsive img-circle center speaker-profile") %>
+        <p class="center"><%= @workshop.speaker.full_name %></p>
+        <% if @workshop.description %>
+          <p class="center"><%= @workshop.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->

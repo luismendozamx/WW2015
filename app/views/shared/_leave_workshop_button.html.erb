@@ -1,0 +1,6 @@
+<%= simple_form_for(current_user.workshop_subscriptions.find_by(workshop_id: @workshop.id), html: { method: :delete }, remote: true) do |f| %>
+  <div><%= hidden_field_tag :workshop_id, @workshop.id %></div>
+  <div class="center">
+    <%= f.submit "Eliminar", class: "btn btn-default btn-w-registro btn-delete center" %>
+  </div>
+<% end %>

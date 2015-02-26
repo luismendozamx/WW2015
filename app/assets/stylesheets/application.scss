@@ -62,9 +62,9 @@
         background-color: darken($secondary-color, 5%);
       }
 
-      @media only screen and (max-width: 778px){
-        margin-left: 10px;
-        margin-right: 10px;
+      @media only screen and (max-width: 992px){
+        padding-left: 5px;
+        padding-right: 5px;
       }
     }
 
@@ -102,12 +102,18 @@ footer{
 }
 
 #login{
+  padding-top: 40px;
+  padding-bottom: 80px;
+
   .call-to{
     margin-top: 30px;
   }
 }
 
 #register{
+  padding-top: 40px;
+  padding-bottom: 80px;
+
   .call-to{
     margin-top: 30px;
   }
@@ -488,9 +494,101 @@ footer{
   }
 }
 
+#myevents{
+
+}
+
+.button-workshop{
+  .btn-registro,
+  .btn-w-registro,
+  .btn-create,
+  .btn-delete{
+    width: auto;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    @media only screen and (max-width: 778px){
+      padding-top: 2px;
+      padding-bottom: 2px;
+      font-size: 9px;
+    }
+  }
+}
+
+.btn-registro{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  @media only screen and (max-width: 778px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+}
+
+.btn-w-registro{
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #fff;
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  @media only screen and (max-width: 778px){
+    padding-top: 30px;
+    padding-bottom: 30px;
+  }
+
+  &:hover{
+    color: #fff;
+  }
+}
+
+.btn-create{
+  background-color: $secondary-color;
+  border-color: $secondary-color;
+
+  &:hover{
+    color: #fff;
+    background-color: lighten($secondary-color, 5%);
+  }
+}
+
+.btn-delete{
+  background-color: $primary-color;
+  border-color: $primary-color;
+
+  &:hover{
+    color: #fff;
+    background-color: lighten($primary-color, 5%);
+  }
+}
+
+
+
 #agenda{
   padding-top: 30px;
   padding-bottom: 30px;
+
+  p, a{
+    @media only screen and (max-width: 778px){
+      font-size: 10px;
+    }
+  }
+
+  .legend{
+    p{
+      color: darken(#eee, 40%);
+      font-size: 16px;
+
+      @media only screen and (max-width: 778px){
+        font-size: 14px;
+      }
+    }
+  }
 
   .day-nav{
     padding-top: 20px;
@@ -539,6 +637,10 @@ footer{
     }
   }
 
+  .row.event{
+    margin-bottom: 10px;
+  }
+
   .time{
     color: #fff;
     padding-left: 18px;
@@ -549,6 +651,11 @@ footer{
       p{
         padding-top: 21px;
         padding-bottom: 21px;
+
+        @media only screen and (max-width: 778px){
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
       }
     } 
   }
@@ -571,8 +678,8 @@ footer{
       }
 
       .subtitle{
-        padding-top: 5px;
         padding-bottom: 5px;
+        margin: 0;
       }
 
       .speaker{
@@ -582,6 +689,12 @@ footer{
         font-weight: 500;
       }
     } 
+  }
+
+  .w-registered{
+    .content{
+      background-color: rgba(0, 183, 159, 0.3);
+    }
   }
 
   .lunch{
@@ -595,8 +708,18 @@ footer{
         padding-top: 20px;
         padding-bottom: 20px;
         margin: 0px;
+        @media only screen and (max-width: 778px){
+          padding-top: 30px;
+          padding-bottom: 30px;
+        }
       }
     } 
+  }
+
+  .modal{
+    p{
+      font-size: 14px;
+    }
   }
 
   #workshop-calendar{
@@ -619,17 +742,16 @@ footer{
       }
 
       .l-1{
-        height: 100px;
-        font-size: 12px;
-      }
-      .l-2{
         height: 200px;
       }
+      .l-2{
+        height: 400px;
+      }
       .l-3{
-        height: 150px;
+        height: 300px;
       }
       .l-4{
-        height: 50px;
+        height: 100px;
       }
 
       @media only screen and (max-width: 778px){

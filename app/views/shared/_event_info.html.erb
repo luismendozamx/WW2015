@@ -1,0 +1,59 @@
+<div class="row event">
+  <div class="col-sm-2 col-xs-3 time">
+    <div class="content">
+      <p class="center"><%= @event.time %></p>
+    </div>
+  </div>
+
+  <% if @event.slot == 11 %>
+    <div class="col-sm-10 col-xs-8 lunch">
+      <div class="content">
+        <p class="center name"><%= @event.name %></p>
+      </div>
+    </div>
+  <% else %>
+    <div class="col-sm-8 col-xs-6 info">
+      <div class="content">
+        <a href="#event-modal-<%= @event.id %>" data-toggle="modal"><p class="center name"><%= @event.name %></p></a>
+        <% if @event.subtitle %>
+          <p class="center subtitle"><%= @event.subtitle %></p>
+        <% end %>
+        <p class="center speaker"><%= @event.speaker.full_name %></p>
+      </div>
+    </div>
+
+    <div class="col-sm-2 col-xs-3 button">
+      <%= render 'shared/event_subscribe_form' %>
+    </div>
+  <% end %>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="event-modal-<%= @event.id %>" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center"><%= @event.name %></h4>
+      </div>
+      <div class="modal-body">
+        <% if @event.day %>
+          <p class="center"><%= @event.day.name %>, <%= @event.time %></p>
+        <% end %>
+        <% if @event.location %>
+          <p class="center">Salón: <%= @event.location.name %></p>
+        <% end %>
+        <hr>
+        <% if @event.subtitle %>
+          <p class="center"><%= @event.subtitle %></p>
+        <% end %>
+        <%= attachment_image_tag(@event.speaker, :profile_image, :fill, 150, 150, class: "img-responsive img-circle center speaker-profile") %>
+        <p class="center"><%= @event.speaker.full_name %></p>
+        <% if @event.description %>
+          <p class="center"><%= @event.description %></p>
+        <% end %>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- Modal -->
