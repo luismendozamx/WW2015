@@ -11,4 +11,24 @@ class Event < ActiveRecord::Base
   # Friendly Id
   extend FriendlyId
   friendly_id :name, use: :slugged
+
+  def number_of_users
+    self.users.count
+  end
+
+  def can_register?(user)
+    if user.banamex?
+      if self.number_of_users + 1 < self.limit_banamex
+        true
+      else
+        false
+      end
+    else
+      if self.number_of_users + 1 < self.limit
+        true
+      else
+        false
+      end
+    end
+  end
 end

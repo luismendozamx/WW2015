@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150225054136) do
+ActiveRecord::Schema.define(version: 20150226175448) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -50,6 +50,8 @@ ActiveRecord::Schema.define(version: 20150225054136) do
     t.string   "time"
     t.integer  "slot"
     t.string   "subtitle"
+    t.integer  "limit"
+    t.integer  "limit_banamex"
   end
 
   add_index "events", ["slug"], name: "index_events_on_slug", using: :btree
@@ -119,6 +121,8 @@ ActiveRecord::Schema.define(version: 20150225054136) do
     t.integer  "category_id"
     t.integer  "day_id"
     t.integer  "length"
+    t.integer  "limit"
+    t.integer  "limit_banamex"
   end
 
 end
