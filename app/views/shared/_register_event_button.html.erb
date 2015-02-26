@@ -1,4 +1,11 @@
-<%= simple_form_for(current_user.event_subscriptions.build, remote: true) do |f| %>
-  <div><%= hidden_field_tag :event_id, @event.id %></div>
-  <%= f.submit "Registrar", class: "btn btn-primary btn-registro btn-create" %>
+<% if @event.can_register?(current_user) %>
+  <%= simple_form_for(current_user.event_subscriptions.build, remote: true) do |f| %>
+    <div><%= hidden_field_tag :event_id, @event.id %></div>
+    <%= f.submit "Registrar", class: "btn btn-primary btn-registro btn-create" %>
+  <% end %>
+<% else %>
+  <%= simple_form_for(current_user.event_subscriptions.build, remote: true) do |f| %>
+    <div><%= hidden_field_tag :event_id, @event.id %></div>
+    <%= f.submit "Lleno", class: "btn btn-primary btn-registro btn-create", disabled: true %>
+  <% end %>
 <% end %>
