@@ -42,7 +42,7 @@ class EventsController < ApplicationController
     end
 
     def event_params
-      params.require(:event).permit(:name, :description, :speaker_id, :location_id, :limit, :limit_banamex)
+      params.require(:event).permit(:name, :description, :speaker_id, :location_id, :limit, :limit_banamex, :slot)
     end
 
 end
