@@ -42,6 +42,6 @@ class WorkshopsController < ApplicationController
     end
 
     def workshop_params
-      params.require(:workshop).permit(:title, :description, :speaker_id, :location_id, :category_id, :limit, :limit_banamex, :slot, :day_id)
+      params.require(:workshop).permit(:title, :description, :speaker_id, :location_id, :category_id, :limit, :limit_banamex, :slot, :day_id, :time)
     end
 end
