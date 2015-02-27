@@ -35,5 +35,9 @@ class Workshop < ActiveRecord::Base
   def number_of_users
     self.users.where('folio between 252 and 4000').count
   end
+
+  def number_of_users_total
+    self.users.count
+  end
   
 end
