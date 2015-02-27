@@ -12,24 +12,28 @@ class Workshop < ActiveRecord::Base
   extend FriendlyId
   friendly_id :title, use: :slugged
 
-  def number_of_users
-    self.users.count
-  end
-
   def can_register?(user)
     if user.banamex?
-      if self.number_of_users + 1 < self.limit_banamex
+      if self.number_of_users_banamex < self.limit_banamex
         true
       else
-        false
+        self.number_of_users < self.limit
       end
     else
-      if self.number_of_users + 1 < self.limit
+      if self.number_of_users_total < self.limit
         true
       else
         false
       end
     end
+  end
+
+  def number_of_users_banamex
+    self.users.where('folio between 1 and 251 or folio between 4001 and 4501').count
+  end
+
+  def number_of_users
+    self.users.where('folio between 252 and 4000').count
   end
   
 end

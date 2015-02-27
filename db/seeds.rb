@@ -7,6 +7,8 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 User.create!(first_name: "Luis", last_name: "Mendoza", email: "luis@mendoza.io", password: "luismendoza", folio: 4502)
 User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@luismendoza.mx", password: "luismendoza", folio: 4502)
+User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@luismendoza.com", password: "luismendoza", folio: 50)
+User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@mendoza.com", password: "luismendoza", folio: 4400)
 
 Day.create(name: "Viernes 6", day: 6)
 Day.create(name: "Sábado 7", day: 7)
@@ -232,7 +234,7 @@ Speaker.create(first_name: "ANA", last_name: "DESVIGNES", category_id: 7)
 Workshop.create(location_id: 5, limit: 15, limit_banamex: 5, title: "BIENESTAR INTEGRAL", speaker_id: 65, category_id: 6, day_id: 2, length: 1, time: "11:00 - 12:00", slot: 8)
 
 Speaker.create(first_name: "RACHEL", last_name: "ITTIC", category_id: 7)
-Workshop.create(location_id: 2, limit: 25, title: "KABBALAH: TRANSFORMANDO TU VIDA", speaker_id: 66, category_id: 6, day_id: 3, length: 1, time: "13:00 - 14:00", slot: 19)
+Workshop.create(location_id: 2, limit: 25, limit_banamex: 5, title: "KABBALAH: TRANSFORMANDO TU VIDA", speaker_id: 66, category_id: 6, day_id: 3, length: 1, time: "13:00 - 14:00", slot: 19)
 
 Workshop.create(location_id: 5, limit: 15, limit_banamex: 5, title: "BLANK", speaker_id: 18, category_id: 2, day_id: 2, length: 1, time: "13:00 - 14:00", slot: 3)
 Workshop.create(location_id: 2, limit: 25, limit_banamex: 5, title: "BLANK", speaker_id: 18, category_id: 2, day_id: 2, length: 2, time: "13:00 - 14:00", slot: 7)
