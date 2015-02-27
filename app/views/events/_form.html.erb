@@ -6,6 +6,7 @@
     <%= f.input :limit %>
     <%= f.input :limit_banamex %>
     <%= f.input :slot %>
+    <%= f.input :time %>
     <%= f.input :day_id, collection: Day.all, label_method: :name %>
     <%= f.input :speaker_id, collection: Speaker.all, label_method: :full_name %>
     <%= f.input :location_id, collection: Location.all, label_method: :name %>
