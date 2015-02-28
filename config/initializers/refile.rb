@@ -8,4 +8,4 @@ aws = {
 }
 Refile.cache = Refile::Backend::S3.new(prefix: "cache", **aws)
 Refile.store = Refile::Backend::S3.new(prefix: "store", **aws)
-#Refile.host = ENV['CDN_HOST']
+Refile.host = "//cdn.womensweekend.com.mx"
