@@ -783,8 +783,6 @@ footer{
 }
 
 #intro-banamex{
-  padding-top: 40px;
-  padding-bottom: 40px;
 
   h1, h2, h3, h4, h5, p, a{
     font-family: 'Interstate';
@@ -812,14 +810,64 @@ footer{
     padding-left: 15px;
     @include linear-gradient(#00bdf2, lighten(#004785, 1%));
     border-bottom-right-radius: 30px;
-    border-top-right-radius: 30px;
   }
 
   .img-banamex{
     background-size: cover;
     background-position: center center;
     border-bottom-left-radius: 30px;
-    border-top-left-radius: 30px;
+  }
+}
+
+#asientos{
+  color: #fff;
+  background-size: cover;
+  background-position: left top;
+  margin-top: -50px;
+
+  @media only screen and (max-width: 992px){
+    background-position: right top;
+  }
+
+  p{
+    font-size: 24px;
+  }
+
+  .row{
+    padding-top: 150px;
+    padding-bottom: 100px;
+  }
+}
+
+#iacepta{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-position: right top;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 992px){
+    background-image: none !important;
+  }
+
+  h1{
+    padding-top: 40px;
+    color: $secondary-color;
+
+    @media only screen and (max-width: 768px){
+      padding-top: 0px;
+    }
+  }
+
+  a{
+    color: $primary-color;
+  }
+
+  p, a{
+    font-size: 24px;
+  }
+
+  .iphone{
+    height: 400px;
   }
 }
 
