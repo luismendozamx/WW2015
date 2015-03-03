@@ -15,6 +15,7 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require owl.carousel
+//= require fancybox
 //= require_tree .
 
 $(document).on('ready page:load', function () {
@@ -46,6 +47,10 @@ $(document).on('ready page:load', function () {
   $('.w-subscribe-form').click( function(){
     console.log( $(this) );
     window.current_workshop = $(this);
+  });
+
+  $(document).ready(function() {
+    $(".fancybox").fancybox();
   });
 });
 

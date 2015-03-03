@@ -10,11 +10,12 @@
  * defined in the other CSS/SCSS files in this directory. It is generally better to create a new
  * file per style scope.
  *
- *= require_tree .
  *= require_self
  *= require owl.carousel
  *= require owl.theme
  *= require font-awesome
+ *= require fancybox
+ *= require_tree .
  */
 
 @import "bootstrap-sprockets";
@@ -490,6 +491,18 @@ footer{
     h3{
       font-weight: 300;
       line-height: 130%;
+    }
+  }
+}
+
+#lightbox{
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+
+    .col-sm-4{
+      padding-left: 0px;
+      padding-right: 0px;
     }
   }
 }

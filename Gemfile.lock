@@ -57,6 +57,8 @@ GEM
     execjs (2.2.2)
     faker (1.4.3)
       i18n (~> 0.5)
+    fancybox2-rails (0.2.8)
+      railties (>= 3.1.0, < 5.0)
     font-awesome-rails (4.3.0.0)
       railties (>= 3.2, < 5.0)
     friendly_id (5.1.0)
@@ -200,6 +202,7 @@ DEPENDENCIES
   bootstrap-will_paginate
   devise
   faker
+  fancybox2-rails
   font-awesome-rails
   friendly_id (~> 5.1.0)
   jbuilder (~> 2.0)
