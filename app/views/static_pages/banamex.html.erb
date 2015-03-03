@@ -1,21 +1,8 @@
 <section id="intro-banamex">
   <div class="container-fluid">
     <div class="row">
-      <div class="col-xs-6">
-        <div id="banamex-carousel" class="owl-carouserl">
-          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-1.jpg') %>')">
-          
-          </div>
-          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-2.jpg') %>')">
-          
-          </div>
-          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-3.jpg') %>')">
-          
-          </div>
-          <div class="img-banamex" style="background-image: url('<%= asset_path('banamex/banamex-4.jpg') %>')">
-          
-          </div>
-        </div>
+      <div class="col-xs-6 screen" style="background-image: url('<%= asset_path('banamex/screen.jpg') %>')">
+        <p class="center"><a href="#video" data-toggle="modal" class="center"><i class="fa fa-play fa-5x"></i></a></p>
       </div>
       
       <div class="col-xs-6 tag-banamex">
@@ -26,8 +13,20 @@
   </div>
 </section>
 
+<div class="modal fade" id="video" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center">Banamex Presenta: Women's Weekend 2015</h4>
+      </div>
+      <div class="modal-body">
+        <iframe width="100%" height="360" src="https://www.youtube.com/embed/gcMZm5peW9c?rel=0&amp;controls=0&amp;showinfo=0" frameborder="0" allowfullscreen></iframe>
+      </div>
+    </div>
+  </div>
+</div>
 
-<!--
 <section id="asientos" style="background-image: url('<%= asset_path('banamex/asientos.png') %>')">
   <div class="container">
     <div class="row">
@@ -43,546 +42,532 @@
 <section id="iacepta" style="background-image: url('<%= asset_path('banamex/verde.png') %>')">
   <div class="container">
     <div class="row">
-      <div class="col-xs-5">
+      <div class="col-xs-7 col-sm-5">
         <h1>Si eres emprendedora y tienes un negocio, conoce iAcepta</h1>
         <p>Encuentra más información en el Spot Banamex o da click <a href="http://www.banamex.com/es/empresas_corporativos/aceptacion_tarjetas/punto_de_venta/iaceptamovilbanamex.htm" target="_blank">aquí</a>.</p>
       </div>
-      <div class="col-xs-7">
+      <div class="col-xs-5 col-sm-7">
         <%= image_tag "banamex/iphone.png", class: "img-responsive center iphone" %>
       </div>
     </div>
   </div>
 </section>
 
--->
+<section id="concierge" style="background-image: url('<%= asset_path('banamex/concierge.png') %>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-7 col-sm-5">
+        <h1>SERVICIO DE CONCIERGE de Citi Prestige</h1>
+        <p>Acércate con nuestro Concierge de Citi Prestige en el Spot Banamex y deja que nuestros asesores se encarguen de consentirte. Podrás conseguir reservaciones en los mejores restaurantes, transporte privado y conocer más sobre este beneficio exclusivo para clientes Premium Banamex.</p>
+        <p>Para mayor información visita:</p>
+        <a href="http://www.banamex.com/citiprestige" target="_blank">www.banamex.com/citiprestige</a>
+      </div>
+    </div>
+  </div>
+</section>
 
-<div id="beneficios" class="container">
-  <div class="row">
-    <div class="col-sm-12">
-      <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+<section id="conferencias" style="background-image: url('<%= asset_path('banamex/conferencias.jpg') %>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-5">
+        <h1>No olvides asistir a las conferencias y workshops que preparamos para ti:</h1>
+        <p>“Mujer y sus finanzas” por Loreto García el viernes 6 a las 17:30 hrs en la sección de Wellness.</p>
+        <p>“Los caminos hacia el éxito” con la participación de Aida Román, Alejandra Llaneza y Susana Ferrando, el sábado 7 a las 17:00 hrs</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Asientos preferenciales dentro de la Fila Banamex en los talleres y conferencias
-              </a>
-            </h2>
-          </div>
-          <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <p>Presenta tu Tarjeta Banamex en la entrada a las conferencias y talleres donde te hayas registrado para acceder a las filas preferenciales.</p>
-              <p class="subtext">Sujeto a disponibilidad. Es necesario presentarse 20 minutos previos al inicio para poder hacer uso de este beneficio.</p>
-            </div>
-          </div>
-        </div>
+<section id="restaurantes-info">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6">
+        <%= image_tag "banamex/restaurantes.png", class: "img-responsive center iphone" %>
+      </div>
+      <div class="col-sm-5">
+        <h1>PROMOCIONES EN RESTAURANTES ALEDAÑOS</h1>
+        <p>Disfruta de una deliciosa comida, un rico café o una divertida noche en los restaurantes y bares que participan con nosotros en esta edición de Women´s Weekend con descuentos, promociones y cortesías para clientes Banamex.</p>
+        <a href="#restaurantes" data-toggle="modal">Ver Restaurantes</a>
+        <p>Beneficios exclusivos para mujeres que paguen con su Tarjeta Banamex.</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="true" aria-controls="collapseTwo">
-                Servicio de Concierge
-              </a>
-            </h2>
-          </div>
-          <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <p>Acércate con nuestro Beyond Lifestyler en el Spot Banamex y deja que nuestros asesores se encarguen de consentirte. Podrás conseguir reservaciones en los mejores restaurantes, transporte privado y conocer más sobre este beneficio exclusivo para clientes Premium Banamex.</p>
-            </div>
-          </div>
-        </div>
+<section id="info-banamex" style="background-image: url('<%= asset_path('banamex/rosa-verde.png') %>')">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-offset-1 col-sm-10">
+        <h3 class="center">A las clientes* que realicen una compra de $ 1,000 o mas pagando con tarjetas BANAMEX, pueden participar en una dinámica para ganar 1 de los 40 boletos para el evento WOMEN’S WEEKEND. </h3>
+        <h5 class="center">Aplica en todas las tiendas de México y Toluca. Excepto Nike Stores. Participan todos los artículos de mujer. Vigencia del 20 de febrero al 5 de marzo, 2014.</h5>
+        <p>Mecánica operativa:</p>
+        <ul>
+          <li>Todas las clientas que realicen una compra de $ 1,000 o más en artículos de mujer y paguen con tarjeta BANAMEX, pueden participar en una dinámica para ganar 1 de los 40 boletos de entrada disponibles para el evento WOMEN ́S WEEKEND, que se llevara a cabo del 6 al 8 de marzo 2015, en el Hotel St. Regis de Reforma en la cd. de México.</li>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
-                Promociones en restaurantes aledaños
-              </a>
-            </h2>
-          </div>
-          <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <p>Disfruta de una deliciosa comida, un rico café o una divertida noche en los restaurantes y bares que participan con nosotros en esta edición de Women´s Weekend con descuentos, promociones y cortesías para clientes Banamex.</p>
-              <p><a href="#restaurantes" data-toggle="modal">Ver Restaurantes</a></p>
-              <p class="subtext">Beneficios exclusivos para mujeres que paguen con su Tarjeta Banamex.</p>
-            </div>
-          </div>
-        </div>
+          <li>Las clientes que deseen participar, deberán enviar una imagen de su ticket de compra por correo electrónico a: <a href="mailto:promociones@innovasport.com" target="_blank">promociones@innovasport.com</a></li>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFour" aria-expanded="true" aria-controls="collapseFour">
-                Si eres emprendedora y tienes un negocio, conoce iAcepta
-              </a>
-            </h2>
-          </div>
-          <div id="collapseFour" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <p>Lleva más lejos tu negocio con iAcepta Móvil Banamex, una terminal punto de venta de última generación discreta y portátil, que te permitirá aceptar pagos con tarjetas de Crédito y Débito con Chip y Banda, utilizando Smartphones o Tablets Apple o Android. </p>
-              <p>Encuentra más información en el Spot Banamex</p>
-            </div>
-          </div>
-        </div>
+          <li>Los primeros 40 correos recibidos que cumplan con las bases establecidas para la promoción, serán los ganadores.</li>
 
-        <div class="panel panel-default">
-          <div class="panel-heading" role="tab" id="headingOne">
-            <h2 class="panel-title">
-              <a data-toggle="collapse" data-parent="#accordion" href="#collapseFive" aria-expanded="true" aria-controls="collapseFive">
-                No olvides asistir a las conferencias y workshops que preparamos para ti: 
-              </a>
-            </h2>
-          </div>
-          <div id="collapseFive" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingOne">
-            <div class="panel-body">
-              <p>“El techo de cristal, a través de la vida” por Loreto García el viernes 6 a las 17:30 hrs en la sección de Wellness.</p>
-              <p>“Los caminos hacia el éxito” con la participación de Aida Román, Alejandra Llaneza y Susana Ferrando, el sábado 7 a las 17:00 hrs</p>
-            </div>
-          </div>
-        </div>
+          <li>Por medio de un e-mail se notificara a las clientas que resulten ganadoras y se les indicara el procedimiento para recoger su boleto de acceso al evento.</li>
 
-        <!-- Modal -->
-        <div class="modal fade" id="restaurantes" tabindex="-1" role="dialog" aria-hidden="true">
-          <div class="modal-dialog">
-            <div class="modal-content">
-              <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
-                <h4 class="modal-title center">Restaurantes Participantes</h4>
-              </div>
-              <div class="modal-body">
-                <table class="table table-bordered">
-                  <thead>
-                    <tr>
-                      <td>Restaurante</td>
-                      <td>Beneficio</td>
-                    </tr>
-                  </thead>
+          <li>Solo pueden participar clientes mujeres. </li>
 
-                  <tbody>
+          <li>Solo aplica en la compra de artículos de mujer.</li>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-01.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>900</p>
-                      </td>
-                      <td>
-                        <p>Una copa de vino gratis</p>
-                        <p>Válido al mencionar promocion con su Tarjeta de Crédito Premium Banamex.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+          <li>No se aceptan devoluciones posteriores.</li>
 
-                    <tr>
-                      <td>
-                        <p>Arbanus – Mercado Roma</p>
-                      </td>
-                      <td>
-                        <p>Postre de la Casa y Café Turco gratis</p>
-                        <p>Un postre de la casa y un café turco por persona</p>
-                        <p>No aplica con otras promociones</p>
-                        <p>Sólo del 6 al 8 de Marzo del 2015</p>
-                      </td>
-                    </tr>
+          <li>Solo 1 boletos por cada $ 1,000 de compra en artículos.</li>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-02.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Alfredo di Roma</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino de nuestra cava de regalo.</p>
-                        <p>En consumos a partir de $1,500 pesos</p>
-                        <p>Limitado a una botella por mesa.</p>
-                        <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+          <li>No aplica en servicios, carreras, Superboletos, etc.</li>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-03.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Au Pied de Cochon</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino de nuestra cava de regalo.</p>
-                        <p>En consumos a partir de $1,500 pesos</p>
-                        <p>Limitado a una botella por mesa.  </p>
-                        <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+          <li>*Sujeto a disponibilidad (solo 40boletos boletos boletos).</li>
+        </ul>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-05.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Bellinghausen</p>
-                      </td>
-                      <td>
-                        <p>15% de descuento</p>
-                        <p>En mesa a partir de 4 personas</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+        <p>Formas de pago:</p>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-06.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Bellini</p>
-                      </td>
-                      <td>
-                        <p>50% de descuento</p>
-                        <p>No aplica con otras promociones.</p>
-                        <p>No aplica en bebidas.</p>                     
-                      </td>
-                    </tr>
+        <p>Tarjetas de crédito y debito BANAMEX (verificar promociones a MSI vigentes).</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-04.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Bistro BEC</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino Viña Real de regalo.</p>
-                        <p>En el consumo de una botella de la misma etiqueta.</p>
-                        <p>La botella es por mesa y de regalo para llevar.</p>
-                        <p>Hasta agotar existencias.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+<!-- Modal -->
+<div class="modal fade" id="restaurantes" tabindex="-1" role="dialog" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title center">Restaurantes Participantes</h4>
+      </div>
+      <div class="modal-body">
+        <table class="table table-bordered">
+          <thead>
+            <tr>
+              <td>Restaurante</td>
+              <td>Beneficio</td>
+            </tr>
+          </thead>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-07.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Bonito</p>
-                      </td>
-                      <td>
-                        <p>Bonito obtén una botella de vino de cortesía</p>
-                        <p>Válido al mencionar promocion  con su Tarjeta de Crédito Banamex Premium.</p>
-                        <p>Menciona el beneficio al llegar al restaurante.</p>
-                        <p>Con consumos apartir de $1,500 pesos.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+          <tbody>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-08.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Brassi</p>
-                      </td>
-                      <td>
-                        <p>15% de descuento en Brassi</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-01.jpg", class: "img-restaurante img-responsive center" %>
+                <p>900</p>
+              </td>
+              <td>
+                <p>Una copa de vino gratis</p>
+                <p>Válido al mencionar promocion con su Tarjeta de Crédito Premium Banamex.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-10.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Carolo</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento.</p>
-                        <p>El descuento aplica en el total de la cuenta antes de IVA.</p>
-                        <p>Sólo para restaurante, no aplica para Deli (boutique).</p> 
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <p>Arbanus – Mercado Roma</p>
+              </td>
+              <td>
+                <p>Postre de la Casa y Café Turco gratis</p>
+                <p>Un postre de la casa y un café turco por persona</p>
+                <p>No aplica con otras promociones</p>
+                <p>Sólo del 6 al 8 de Marzo del 2015</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-11.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Casa Bell</p>
-                      </td>
-                      <td>
-                        <p>Una Botella de vino de la casa de  cortesía</p>
-                        <p>Una botella por mesa</p>
-                        <p>Sólo del 6 al 8 de Marzo del 2015</p>
-                        <p>No aplica con otras promociones</p> 
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-02.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Alfredo di Roma</p>
+              </td>
+              <td>
+                <p>Botella de vino de nuestra cava de regalo.</p>
+                <p>En consumos a partir de $1,500 pesos</p>
+                <p>Limitado a una botella por mesa.</p>
+                <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-12.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Casa Bell</p>
-                      </td>
-                      <td>
-                        <p>15% de descuento.</p>
-                        <p>En mesa apartir de 4 personas.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-03.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Au Pied de Cochon</p>
+              </td>
+              <td>
+                <p>Botella de vino de nuestra cava de regalo.</p>
+                <p>En consumos a partir de $1,500 pesos</p>
+                <p>Limitado a una botella por mesa.  </p>
+                <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-13.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Cavallino</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento</p>
-                        <p>En mesas de hasta 6 personas</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-05.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Bellinghausen</p>
+              </td>
+              <td>
+                <p>15% de descuento</p>
+                <p>En mesa a partir de 4 personas</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-14.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Chapulín</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino de nuestra cava de regalo.</p>
-                        <p>En consumos a partir de $1,500 pesos Limitado a una botella por mesa.</p>
-                        <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-06.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Bellini</p>
+              </td>
+              <td>
+                <p>50% de descuento</p>
+                <p>No aplica con otras promociones.</p>
+                <p>No aplica en bebidas.</p>                     
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <p>China Grill</p>
-                      </td>
-                      <td>
-                        <p>Ronda de Martinis de cortesía</p>
-                        <p>Un Martini por persona</p>
-                        <p>Hasta 6 martinis por mesa</p>
-                        <p>Sólo del 6 al 8 de Marzo del 2015</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-04.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Bistro BEC</p>
+              </td>
+              <td>
+                <p>Botella de vino Viña Real de regalo.</p>
+                <p>En el consumo de una botella de la misma etiqueta.</p>
+                <p>La botella es por mesa y de regalo para llevar.</p>
+                <p>Hasta agotar existencias.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-15.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Comensal</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino Viña Real de regalo.</p>
-                        <p>En el consumo de una botella de la misma etiqueta.</p>
-                        <p>La botella es por mesa y de regalo para llevar.</p>
-                        <p>Hasta agotar existencias.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-07.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Bonito</p>
+              </td>
+              <td>
+                <p>Bonito obtén una botella de vino de cortesía</p>
+                <p>Válido al mencionar promocion  con su Tarjeta de Crédito Banamex Premium.</p>
+                <p>Menciona el beneficio al llegar al restaurante.</p>
+                <p>Con consumos apartir de $1,500 pesos.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-16.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Condesa df</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-08.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Brassi</p>
+              </td>
+              <td>
+                <p>15% de descuento en Brassi</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-17.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Distrito Capital</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-10.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Carolo</p>
+              </td>
+              <td>
+                <p>10% de descuento.</p>
+                <p>El descuento aplica en el total de la cuenta antes de IVA.</p>
+                <p>Sólo para restaurante, no aplica para Deli (boutique).</p> 
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-18.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Downtown</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-11.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Casa Bell</p>
+              </td>
+              <td>
+                <p>Una Botella de vino de la casa de  cortesía</p>
+                <p>Una botella por mesa</p>
+                <p>Sólo del 6 al 8 de Marzo del 2015</p>
+                <p>No aplica con otras promociones</p> 
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-19.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Estoril Polanco</p>
-                      </td>
-                      <td>
-                        <p>Perejil Estoril de Cortesía</p>
-                        <p>Uno por persona</p>
-                        <p>Sólo del 6 al 8 de Marzo del 2015</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-12.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Casa Bell</p>
+              </td>
+              <td>
+                <p>15% de descuento.</p>
+                <p>En mesa apartir de 4 personas.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-20.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>J&#38;G Grill</p>
-                      </td>
-                      <td>
-                        <p>En J&#38;G Grill disfruta del 10% de descuento </p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-13.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Cavallino</p>
+              </td>
+              <td>
+                <p>10% de descuento</p>
+                <p>En mesas de hasta 6 personas</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-21.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>La Loggia</p>
-                      </td>
-                      <td>
-                        <p>En La Loggia obtén una Botella de vino Viña Real de regalo</p>
-                        <p>Al pagar con Tarjetas de Crédito Banamex Premium.</p>
-                        <p>En el consumo de una botella de la misma etiqueta.</p>
-                        <p>La botella es por mesa y de regalo para llevar.</p>
-                        <p>Hasta agotar existencias.</p>
-                        <p>El tarjetahabiente deberá solicitar la promoción al llegar al restaurante.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-14.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Chapulín</p>
+              </td>
+              <td>
+                <p>Botella de vino de nuestra cava de regalo.</p>
+                <p>En consumos a partir de $1,500 pesos Limitado a una botella por mesa.</p>
+                <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-22.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>La Mansión</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino del mes de regalo.</p>
-                        <p>En mesas a partir de 4 personas. En cenas a partir de las 19:00 hrs.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <p>China Grill</p>
+              </td>
+              <td>
+                <p>Ronda de Martinis de cortesía</p>
+                <p>Un Martini por persona</p>
+                <p>Hasta 6 martinis por mesa</p>
+                <p>Sólo del 6 al 8 de Marzo del 2015</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-23.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Les Moustaches</p>
-                      </td>
-                      <td>
-                        <p>Botella de Vino de la casa en cortesía.</p>
-                        <p>Válido al pagar con Tarjeta de Crédito Premium Banamex. </p>
-                        <p>En consumos mínimos de $1,000 pesos</p>
-                        <p>No aplica ni es acumulable con otras promociones o descuentos.</p>
-                        <p>Una promoción por mesa.</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-15.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Comensal</p>
+              </td>
+              <td>
+                <p>Botella de vino Viña Real de regalo.</p>
+                <p>En el consumo de una botella de la misma etiqueta.</p>
+                <p>La botella es por mesa y de regalo para llevar.</p>
+                <p>Hasta agotar existencias.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-24.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Lincoln</p>
-                      </td>
-                      <td>
-                        <p>Copa de vino de regalo.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-16.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Condesa df</p>
+              </td>
+              <td>
+                <p>10% de descuento.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-25.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Loma Linda</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento</p>
-                        <p>En mesas de hasta 6 personas</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-17.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Distrito Capital</p>
+              </td>
+              <td>
+                <p>10% de descuento.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-26.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Mexsi Bocu</p>
-                      </td>
-                      <td>
-                        <p>Una botella de vino de cortesía</p>
-                        <p>En consumos a partir de $1,500 pesos.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-18.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Downtown</p>
+              </td>
+              <td>
+                <p>10% de descuento.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-28.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Nick San</p>
-                      </td>
-                      <td>
-                        <p>Obtén 15% de descuento</p>
-                        <p>Válido en:  Nick San Duraznos y Plaza Carso</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-19.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Estoril Polanco</p>
+              </td>
+              <td>
+                <p>Perejil Estoril de Cortesía</p>
+                <p>Uno por persona</p>
+                <p>Sólo del 6 al 8 de Marzo del 2015</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-29.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Romita</p>
-                      </td>
-                      <td>
-                        <p>10% de descuento</p>
-                        <p>Válido en comidas de 14:00 hrs. a las 17:00 hrs.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-20.jpg", class: "img-restaurante img-responsive center" %>
+                <p>J&#38;G Grill</p>
+              </td>
+              <td>
+                <p>En J&#38;G Grill disfruta del 10% de descuento </p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-30.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Rustic Kitchen México</p>
-                      </td>
-                      <td>
-                        <p>Una botella de vino de la casa</p>
-                        <p>En mesa a partir de 4 personas. </p>
-                        <p>Una promoción por mesa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-21.jpg", class: "img-restaurante img-responsive center" %>
+                <p>La Loggia</p>
+              </td>
+              <td>
+                <p>En La Loggia obtén una Botella de vino Viña Real de regalo</p>
+                <p>Al pagar con Tarjetas de Crédito Banamex Premium.</p>
+                <p>En el consumo de una botella de la misma etiqueta.</p>
+                <p>La botella es por mesa y de regalo para llevar.</p>
+                <p>Hasta agotar existencias.</p>
+                <p>El tarjetahabiente deberá solicitar la promoción al llegar al restaurante.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-35.png", class: "img-restaurante img-responsive center" %>
-                        <p>The Palm</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino de nuestra cava de regalo.</p>
-                        <p>En consumos a partir de $1,500 pesos</p>
-                        <p>Limitado a una botella por mesa.</p>
-                        <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-22.jpg", class: "img-restaurante img-responsive center" %>
+                <p>La Mansión</p>
+              </td>
+              <td>
+                <p>Botella de vino del mes de regalo.</p>
+                <p>En mesas a partir de 4 personas. En cenas a partir de las 19:00 hrs.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-36.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Tori Tori</p>
-                      </td>
-                      <td>
-                        <p>Una Jarrita de sake de cortesía</p>
-                        <p>Mencionar el beneficio al reservar y al llegar al restaurante.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-23.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Les Moustaches</p>
+              </td>
+              <td>
+                <p>Botella de Vino de la casa en cortesía.</p>
+                <p>Válido al pagar con Tarjeta de Crédito Premium Banamex. </p>
+                <p>En consumos mínimos de $1,000 pesos</p>
+                <p>No aplica ni es acumulable con otras promociones o descuentos.</p>
+                <p>Una promoción por mesa.</p>
+              </td>
+            </tr>
 
-                    <tr>
-                      <td>
-                        <%= image_tag "restaurantes/rest-31.jpg", class: "img-restaurante img-responsive center" %>
-                        <p>Zhen Shanghai</p>
-                      </td>
-                      <td>
-                        <p>Botella de vino de nuestra cava de regalo.</p>
-                        <p>En consumos a partir de $1,500 pesos</p>
-                        <p>Limitado a una botella por mesa.</p>
-                        <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
-                        <p>No aplica con otras promociones</p>
-                      </td>
-                    </tr>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-24.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Lincoln</p>
+              </td>
+              <td>
+                <p>Copa de vino de regalo.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                  </tbody> 
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-25.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Loma Linda</p>
+              </td>
+              <td>
+                <p>10% de descuento</p>
+                <p>En mesas de hasta 6 personas</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
-                </table>
-              </div>
-            </div>
-          </div>
-        </div>
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-26.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Mexsi Bocu</p>
+              </td>
+              <td>
+                <p>Una botella de vino de cortesía</p>
+                <p>En consumos a partir de $1,500 pesos.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
 
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-28.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Nick San</p>
+              </td>
+              <td>
+                <p>Obtén 15% de descuento</p>
+                <p>Válido en:  Nick San Duraznos y Plaza Carso</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-29.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Romita</p>
+              </td>
+              <td>
+                <p>10% de descuento</p>
+                <p>Válido en comidas de 14:00 hrs. a las 17:00 hrs.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-30.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Rustic Kitchen México</p>
+              </td>
+              <td>
+                <p>Una botella de vino de la casa</p>
+                <p>En mesa a partir de 4 personas. </p>
+                <p>Una promoción por mesa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-35.png", class: "img-restaurante img-responsive center" %>
+                <p>The Palm</p>
+              </td>
+              <td>
+                <p>Botella de vino de nuestra cava de regalo.</p>
+                <p>En consumos a partir de $1,500 pesos</p>
+                <p>Limitado a una botella por mesa.</p>
+                <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-36.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Tori Tori</p>
+              </td>
+              <td>
+                <p>Una Jarrita de sake de cortesía</p>
+                <p>Mencionar el beneficio al reservar y al llegar al restaurante.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+            <tr>
+              <td>
+                <%= image_tag "restaurantes/rest-31.jpg", class: "img-restaurante img-responsive center" %>
+                <p>Zhen Shanghai</p>
+              </td>
+              <td>
+                <p>Botella de vino de nuestra cava de regalo.</p>
+                <p>En consumos a partir de $1,500 pesos</p>
+                <p>Limitado a una botella por mesa.</p>
+                <p>La botella se le entregará después de su comida o cena para llevar a su casa.</p>
+                <p>No aplica con otras promociones</p>
+              </td>
+            </tr>
+
+          </tbody> 
+
+        </table>
       </div>
     </div>
   </div>

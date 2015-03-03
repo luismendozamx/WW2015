@@ -787,6 +787,27 @@ footer{
   h1, h2, h3, h4, h5, p, a{
     font-family: 'Interstate';
   }
+
+  .screen{
+    p{
+      padding-top: 150px;
+      padding-bottom: 150px;
+      text-shadow: 1px 1px 3px #333;
+      min-height: 379px;
+    }
+
+    p, a{
+      color: $secondary-color;
+
+      &:hover{
+        color: $primary-color;
+      }
+    }
+
+    background-size: cover;
+    background-position: center center;
+    border-bottom-left-radius: 30px;
+  }
   
   .radius{
     border-bottom-left-radius: 5px;
@@ -868,6 +889,109 @@ footer{
 
   .iphone{
     height: 400px;
+  }
+}
+
+#concierge{
+  padding-top: 100px;
+  padding-bottom: 100px;
+  background-position: left top;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+  @media only screen and (max-width: 992px){
+    background-image: none !important;
+  }
+
+  h1{
+    padding-top: 40px;
+    color: $secondary-color;
+
+    @media only screen and (max-width: 768px){
+      padding-top: 0px;
+    }
+  }
+
+  a{
+    color: $primary-color;
+  }
+
+  p, a{
+    font-size: 24px;
+  }
+}
+
+#conferencias{
+  color: #fff;
+  background-size: cover;
+  background-position: right top;
+
+  @media only screen and (max-width: 992px){
+    background-position: right top;
+  }
+
+  p{
+    font-size: 24px;
+  }
+
+  h1{
+    text-transform: uppercase;
+  }
+
+  .row{
+    padding-top: 100px;
+    padding-bottom: 100px;
+  }
+}
+
+#restaurantes-info{
+  background-position: left top;
+  background-repeat: no-repeat;
+
+  .container-fluid{
+    padding-left: 0px;
+    padding-right: 0px;
+
+    @media only screen and (max-width: 768px){
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+  }
+
+  h1{
+    padding-top: 40px;
+    color: $secondary-color;
+
+    @media only screen and (max-width: 768px){
+      padding-top: 0px;
+    }
+  }
+
+  a{
+    color: $secondary-color;
+  }
+
+  p, a{
+    font-size: 24px;
+  }
+}
+
+#info-banamex{
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-position: right bottom;
+  background-repeat: no-repeat;
+
+  p{
+    font-size: 22px;
+  }
+
+  li{
+    font-size: 20px;
+  }
+
+  a{
+    color: $primary-color;
   }
 }
 

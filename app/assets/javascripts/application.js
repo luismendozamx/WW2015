@@ -74,7 +74,11 @@ function ajustaPonentes(){
 }
 
 function ajustaBanamex(){
-  $('.img-banamex').height( $('.tag-banamex').height() + 100 );
+  if( ($('.tag-banamex').height() + 100) < 379){
+    $('.screen').height(379);
+  }else{
+    $('.screen').height( $('.tag-banamex').height() + 100 );
+  }
 }
 
 
