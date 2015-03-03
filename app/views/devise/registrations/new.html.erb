@@ -7,7 +7,7 @@
         <%= f.error_notification %>
 
         <div class="form-inputs">
-          <%= f.input :folio, label: "Folio de boleto", required: true, autofocus: true %>
+          <%= f.input :folio, label: "Folio de boleto", hint: "Cada folio permite el registro de dos usuarios.", required: true, autofocus: true %>
           <%= f.input :first_name, label: "Nombre", required: true %>
           <%= f.input :last_name, label: "Apellido", required: true %>
           <%= f.input :email, required: true %>
