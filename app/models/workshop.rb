@@ -29,7 +29,7 @@ class Workshop < ActiveRecord::Base
   end
 
   def number_of_users_banamex
-    self.users.where('folio between 1 and 251 or folio between 4001 and 4501').count
+    self.users.where('folio between 1 and 251 or folio between 4001 and 5501').count
   end
 
   def number_of_users
