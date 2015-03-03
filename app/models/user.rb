@@ -46,7 +46,7 @@ class User < ActiveRecord::Base
   end
 
   def banamex?
-    if (1..250).include?(folio) || (4001..4501).include?(folio)
+    if (1..250).include?(folio) || (4001..5448).include?(folio)
       true
     else
       false
