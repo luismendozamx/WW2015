@@ -29,11 +29,11 @@ class Event < ActiveRecord::Base
   end
 
   def number_of_users_banamex
-    self.users.where('folio between 1 and 251 or folio between 4001 and 5448').count
+    self.users.where('folio between 1 and 251 or folio between 4001 and 4551').count
   end
 
   def number_of_users
-    self.users.where('folio between 252 and 4000 or folio between 5449 and 5518').count
+    self.users.where('folio between 252 and 4000 or folio between 4552 and 5518').count
   end
 
   def number_of_users_total
