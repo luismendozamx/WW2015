@@ -20,10 +20,10 @@ class Event < ActiveRecord::Base
         self.number_of_users < self.limit
       end
     else
-      if self.number_of_users_total < self.limit
-        true
+      if self.number_of_users_banamex > self.limit_banamex
+        self.number_of_users_total < self.limit + self.limit_banamex
       else
-        false
+        self.number_of_users < self.limit
       end
     end
   end
@@ -33,7 +33,7 @@ class Event < ActiveRecord::Base
   end
 
   def number_of_users
-    self.users.where('folio between 252 and 4000 or folio between 4552 and 5518').count
+    self.users.where('folio between 252 and 4000 or folio between 4552 and 5519').count
   end
 
   def number_of_users_total

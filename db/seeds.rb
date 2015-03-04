@@ -5,8 +5,8 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
-User.create!(first_name: "Luis", last_name: "Mendoza", email: "luis@mendoza.io", password: "luismendoza", folio: 4502)
-User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@luismendoza.mx", password: "luismendoza", folio: 4502)
+User.create!(first_name: "Luis", last_name: "Mendoza", email: "luis@mendoza.io", password: "luismendoza", folio: 5519)
+User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@luismendoza.mx", password: "luismendoza", folio: 5519)
 User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@luismendoza.com", password: "luismendoza", folio: 50)
 User.create!(first_name: "Enrique", last_name: "Mendoza", email: "luis@mendoza.com", password: "luismendoza", folio: 4400)
 
@@ -60,7 +60,7 @@ Speaker.create(first_name: "AIDA ROMÁN, SUSANA", last_name: "FERRANDO Y ALEJAND
 Event.create(location_id: 1, limit: 120, limit_banamex: 30, speaker_id: 13, day_id: 2, time: "17:00 - 18:00", slot: 13, name: "LOS CAMINOS HACIA EL ÉXITO", description: "En este panel, las ponente, nos comparten sus experiencias de vida y los caminos que han seguido con sus diferentes obstáculos, logros y oportunidades para llegar a ser las grandes mujeres de éxito que son.")
 
 Speaker.create(first_name: "MAR", last_name: "ABASCAL", category_id: 1, description: "PUBLISHER", bio: "Publisher de revistas femeninas en México y Latinoamérica en Editorial Televisa, teniendo a su cargo los títulos de Vanidades, Marie Claire, Vanidades novias y Grazia.")
-Event.create(location_id: 1, limit: 120, limit_banamex: 30, speaker_id: 14, day_id: 1, time: "16:00 - 17:00", slot: 1, name: "10 REGLAS DE MODA Y BELLEZA PARA LUCIR IMPECABLE", description: "Mar nos comparte increíbles tips que podemos aplicar para tener una imágen segura y atractiva. ¡No te pierdas sus consejos!")
+Event.create(location_id: 1, limit: 1, limit_banamex: 1, speaker_id: 14, day_id: 1, time: "16:00 - 17:00", slot: 1, name: "10 REGLAS DE MODA Y BELLEZA PARA LUCIR IMPECABLE", description: "Mar nos comparte increíbles tips que podemos aplicar para tener una imágen segura y atractiva. ¡No te pierdas sus consejos!")
 
 Speaker.create(first_name: "CHRISTINA", last_name: "BERTON", category_id: 1, description: "FUNDADORA DE AMARA FUNDACIÓN PRO AUTOESTIMA", bio: "Fundadora de Amara Fundación Pro Autoestima, también Directora y Asesora Global del Proyecto Dove para la Autoestima en México. Es una mujer apasionada y comprometida con la labor de promover una alta autoestima.")
 Event.create(location_id: 1, limit: 120, limit_banamex: 30, speaker_id: 15, day_id: 2, time: "12:00 - 13:00", slot: 8, name: "LIBERANDO ESTEREOTIPOS", description: "En esta conferencia Christina invita a los participantes a una reflexión personal sobre imagen corporal, autoestima  y el impacto de los medios sobre ambas, buscando dejar un mensaje de auto afirmación a través de ejercicios de auto descubrimiento que revisan las creencias limitantes y los estereotipos de belleza.")
@@ -133,7 +133,7 @@ Speaker.create(first_name: "MAR", last_name: "VARGAS", category_id: 3, descripti
 Workshop.create(location_id: 2, limit: 25, limit_banamex: 5, title: "BACHATA: SENSUALIDAD LATINA", speaker_id: 35, category_id: 3, day_id: 2, length: 3, time: "17:00 - 18:30", slot: 9, description: "En este taller, Mar nos introduce en el mundo de la bachata. Desde su origen y pasos básicos, encontrando así una divertida forma de expresar la sensualidad.")
 
 Speaker.create(first_name: "MARLENE", last_name: "CARBONELL", category_id: 7)
-Workshop.create(location_id: 2, limit: 25, limit_banamex: 5, title: "LADY SALSA", speaker_id: 36, category_id: 3, day_id: 1, length: 1, time: "16:00 - 17:00", slot: 1)
+Workshop.create(location_id: 2, limit: 1, limit_banamex: 1, title: "LADY SALSA", speaker_id: 36, category_id: 3, day_id: 1, length: 1, time: "16:00 - 17:00", slot: 1)
 
 Speaker.create(first_name: "CARLA", last_name: "REMES", category_id: 7)
 Workshop.create(location_id: 2, limit: 25, limit_banamex: 5, title: "SENSUAL JAZZ", speaker_id: 37, category_id: 3, day_id: 2, length: 2, time: "14:00 - 16:00", slot: 7)
