@@ -8,6 +8,9 @@ class Event < ActiveRecord::Base
   has_many :event_subscriptions
   has_many :users, through: :event_subscriptions
 
+  has_many :event_waiting_lists
+  has_many :user_lists, through: :event_waiting_lists, source: :user
+
   # Friendly Id
   extend FriendlyId
   friendly_id :name, use: :slugged

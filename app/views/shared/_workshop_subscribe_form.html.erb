@@ -3,7 +3,13 @@
     <% if current_user.workshop_subscribed?(@workshop) %>
       <%= render 'shared/leave_workshop_button' %>
     <% else %>
-      <%= render 'shared/register_workshop_button' %>
+      <% if current_user.workshop_subscribed_list?(@workshop) %>
+        <%= render 'shared/leave_workshop_list_button' %>
+      <% elsif @workshop.can_register?(current_user) %>
+        <%= render 'shared/register_workshop_button' %>
+      <% else %>
+        <%= render 'shared/register_workshop_list_button' %>
+      <% end %>
     <% end %>
   </div>
 <% else %>

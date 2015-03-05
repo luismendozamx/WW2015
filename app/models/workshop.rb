@@ -8,6 +8,9 @@ class Workshop < ActiveRecord::Base
   has_many :workshop_subscriptions
   has_many :users, through: :workshop_subscriptions
 
+  has_many :workshop_waiting_lists
+  has_many :user_lists, through: :workshop_waiting_lists, source: :user
+
   # Friendly Id
   extend FriendlyId
   friendly_id :title, use: :slugged
