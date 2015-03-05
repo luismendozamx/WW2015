@@ -1,0 +1,6 @@
+<%= simple_form_for(current_user.workshop_waiting_lists.build, remote: true) do |f| %>
+  <div><%= hidden_field_tag :workshop_id, @workshop.id %></div>
+  <div class="center">
+    <%= f.submit "Lista de Espera", class: "btn btn-primary btn-w-registro btn-create btn-lista", data: { disable_with: "Guardando..." } %>
+  </div>
+<% end %>

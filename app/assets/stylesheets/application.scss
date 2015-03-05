@@ -580,6 +580,14 @@ footer{
   }
 }
 
+.btn-lista{
+  background-color: lighten($secondary-color, 8%);
+  border-color: lighten($secondary-color, 8%);
+
+  &:hover{
+    background-color: lighten($secondary-color, 13%);
+  }
+}
 
 
 #agenda{

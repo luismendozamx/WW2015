@@ -3,7 +3,13 @@
     <% if current_user.event_subscribed?(@event) %>
       <%= render 'shared/leave_event_button' %>
     <% else %>
-      <%= render 'shared/register_event_button' %>
+      <% if current_user.event_subscribed_list?(@event) %>
+        <%= render 'shared/leave_event_list_button' %>
+      <% elsif @event.can_register?(current_user) %>
+        <%= render 'shared/register_event_button' %>
+      <% else %>
+        <%= render 'shared/register_event_list_button' %>
+      <% end %>
     <% end %>
   </div>
 <% else %>

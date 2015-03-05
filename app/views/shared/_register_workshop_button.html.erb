@@ -1,15 +1,6 @@
-<% if @workshop.can_register?(current_user) %>
-  <%= simple_form_for(current_user.workshop_subscriptions.build, remote: true) do |f| %>
-    <div><%= hidden_field_tag :workshop_id, @workshop.id %></div>
-    <div class="center">
-      <%= f.submit "Registrar", class: "btn btn-primary btn-w-registro btn-create center", data: { disable_with: "Guardando..." } %>
-    </div>
-  <% end %>
-<% else %>
-  <%= simple_form_for(current_user.workshop_subscriptions.build, remote: true) do |f| %>
-    <div><%= hidden_field_tag :workshop_id, @workshop.id %></div>
-    <div class="center">
-      <%= f.submit "Lleno", class: "btn btn-primary btn-w-registro btn-create center", disabled: true %>
-    </div>
-  <% end %>
+<%= simple_form_for(current_user.workshop_subscriptions.build, remote: true) do |f| %>
+  <div><%= hidden_field_tag :workshop_id, @workshop.id %></div>
+  <div class="center">
+    <%= f.submit "Registrar", class: "btn btn-primary btn-w-registro btn-create center", data: { disable_with: "Guardando..." } %>
+  </div>
 <% end %>

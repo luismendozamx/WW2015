@@ -1,0 +1,2 @@
+module EvenWaitingListsHelper
+end
