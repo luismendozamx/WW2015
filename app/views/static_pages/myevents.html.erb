@@ -57,7 +57,7 @@
         <%= render 'shared/myevent_info' %>
       <% end %>
     <% else %>
-      <h3>No tienes eventos registrados, <%= link_to "agrega eventos a tu agenda", agenda_path %>.</h3>
+      <h3>No tienes eventos en lista de espera.</h3>
     <% end %>
   <% else %>
     <h3 class="center"><%= link_to "Regístrate para agregar eventos", register_path %></h3>
@@ -79,7 +79,7 @@
         <%= render 'shared/myworkshop_info' %>
       <% end %>
     <% else %>
-      <h3>No tienes workshops registrados, <%= link_to "agrega workshops a tu agenda", agenda_path %>.</h3>
+      <h3>No tienes workshops en lista de espera.</h3>
     <% end %>
   <% else %>
     <h3 class="center"><%= link_to "Regístrate para agregar workshops", register_path %></h3>
