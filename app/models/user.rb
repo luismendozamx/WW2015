@@ -76,7 +76,7 @@ class User < ActiveRecord::Base
   end
 
   def is_admin?
-    if (5519..5521).include?(folio)
+    if (5519..5522).include?(folio)
       true
     else
       false
