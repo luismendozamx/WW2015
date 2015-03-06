@@ -1,7 +1,11 @@
 <div class="container admin">
   <h3 class="">Evento: <%= @event.name %></h3>
   <p class="">Speaker: <%= @event.speaker.full_name %></p>
-  <p class="">Salón: <%= @event.location.name %></p>
+  <% if @event.location != nil %>
+    <p class="">Salón: <%= @event.location.name %></p>
+  <% else %>
+    <p class="">Salón: -</p>
+  <% end %>
   <p class="">Horario: <%= @event.day.name %>, <%= @event.time %></p>
   <p><strong>Usuarios Registrados:  <%= @event.users.count %></strong></p>
 

@@ -18,7 +18,11 @@
         </td>
         <td><%= workshop.day.name %></td>
         <td><%= workshop.time %></td>
-        <td><%= workshop.location.name %></td>
+        <% if workshop.location != nil %>
+          <td><%= workshop.location.name %></td>
+        <% else %>
+          <td>-</td>
+        <% end %>
         <td><%= workshop.speaker.full_name %></td>
       </tr>
     <% end %>

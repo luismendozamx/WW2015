@@ -1,7 +1,11 @@
 <div class="container admin">
   <h3 class="">Workshop: <%= @workshop.title %></h3>
   <p class="">Speaker: <%= @workshop.speaker.full_name %></p>
-  <p class="">Salón: <%= @workshop.location.name %></p>
+  <% if @workshop.location != nil %>
+    <p class="">Salón: <%= @workshop.location.name %></p>
+  <% else %>
+    <p class="">Salón: -</p>
+  <% end %>
   <p class="">Horario: <%= @workshop.day.name %>, <%= @workshop.time %></p>
   <p><strong>Usuarios Registrados:  <%= @workshop.users.count %></strong></p>
 

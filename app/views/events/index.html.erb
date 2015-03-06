@@ -18,7 +18,11 @@
         </td>
         <td><%= event.day.name %></td>
         <td><%= event.time %></td>
-        <td><%= event.location.name %></td>
+        <% if event.location != nil %>
+          <td><%= event.location.name %></td>
+        <% else %>
+          <td>-</td>
+        <% end %>
         <td><%= event.speaker.full_name %></td>
       </tr>
     <% end %>
