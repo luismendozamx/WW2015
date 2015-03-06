@@ -1,21 +1,84 @@
-<div class="container">
-  <p id="notice"><%= notice %></p>
+<div class="container admin">
+  <h3 class="">Evento: <%= @event.name %></h3>
+  <p class="">Speaker: <%= @event.speaker.full_name %></p>
+  <p class="">Salón: <%= @event.location.name %></p>
+  <p class="">Horario: <%= @event.day.name %>, <%= @event.time %></p>
+  <p><strong>Usuarios Registrados:  <%= @event.users.count %></strong></p>
 
-  <p>
-    <strong>Name:</strong>
-    <%= @event.name %>
-  </p>
+  <h4 class="center">Registros</h4>
+  <table class="table table-condensed table-striped">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Folio boleto</td>
+        <td>Boleto Banamex</td>
+        <td>Cliente Banamex</td>
+      </tr>
+    </thead>
 
-  <p>
-    <strong>Description:</strong>
-    <%= @event.description %>
-  </p>
+    <tbody>
+      <% n = 1 %>
+      <% @event.users.each do |user| %>
+        <tr>
+          <td><%= n %></td>
+          <td><%= user.full_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.folio %></td>
+          <% if user.banamex? %>
+            <td>Sí</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+          <% if user.cliente_banamex %>
+            <td>Sí</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+        </tr>
+        <% n = n + 1 %>
+      <% end %>
+    </tbody>
+  </table>
 
-  <p>
-    <strong>Speaker:</strong>
-    <%= @event.speaker.full_name %>
-  </p>
+  <hr>
 
-  <%= link_to 'Edit', edit_event_path(@event) %> |
-  <%= link_to 'Back', events_path %>
+  <h4 class="center">Lista de Espera</h4>
+  <p class="center"><strong>Número de usuarios: <%= @event.user_lists.count %></strong></p>
+  <table class="table table-condensed table-striped">
+    <thead>
+      <tr>
+        <td>#</td>
+        <td>Nombre</td>
+        <td>Email</td>
+        <td>Folio boleto</td>
+        <td>Boleto Banamex</td>
+        <td>Cliente Banamex</td>
+      </tr>
+    </thead>
+
+    <tbody>
+      <% n = 1 %>
+      <% @event.user_lists.each do |user| %>
+        <tr>
+          <td><%= n %></td>
+          <td><%= user.full_name %></td>
+          <td><%= user.email %></td>
+          <td><%= user.folio %></td>
+          <% if user.banamex? %>
+            <td>Sí</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+          <% if user.cliente_banamex %>
+            <td>Sí</td>
+          <% else %>
+            <td>No</td>
+          <% end %>
+        </tr>
+        <% n = n + 1 %>
+      <% end %>
+    </tbody>
+  </table>
 </div>

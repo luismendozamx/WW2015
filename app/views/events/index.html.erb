@@ -1,7 +1,27 @@
-<div class="container">
-  <% @events.each do |event| %>
-    <div class="row">
-      <%= link_to event.name, event_path(event) %>
-    </div>
-  <% end %>
+<div class="admin container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Eventos</td>
+        <td>Día</td>
+        <td>Hora</td>
+        <td>Salón</td>
+        <td>Speaker</td>
+      </tr>
+    </thead>
+    
+    <tbody>
+    <% @events.order('slot ASC').each do |event| %>
+      <tr>
+        <td>
+          <%= link_to event.name, event_path(event) %>
+        </td>
+        <td><%= event.day.name %></td>
+        <td><%= event.time %></td>
+        <td><%= event.location.name %></td>
+        <td><%= event.speaker.full_name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>

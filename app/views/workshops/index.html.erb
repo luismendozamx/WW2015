@@ -1,7 +1,27 @@
-<div class="container">
-  <% @workshops.each do |workshop| %>
-    <div class="row">
-      <%= link_to workshop.title, workshop_path(workshop) %>
-    </div>
-  <% end %>
+<div class="admin container">
+  <table class="table table-striped">
+    <thead>
+      <tr>
+        <td>Workshops</td>
+        <td>Día</td>
+        <td>Hora</td>
+        <td>Salón</td>
+        <td>Speaker</td>
+      </tr>
+    </thead>
+    
+    <tbody>
+    <% @workshops.order('slot ASC').each do |workshop| %>
+      <tr>
+        <td>
+          <%= link_to workshop.title, workshop_path(workshop) %>
+        </td>
+        <td><%= workshop.day.name %></td>
+        <td><%= workshop.time %></td>
+        <td><%= workshop.location.name %></td>
+        <td><%= workshop.speaker.full_name %></td>
+      </tr>
+    <% end %>
+    </tbody>
+  </table>
 </div>
