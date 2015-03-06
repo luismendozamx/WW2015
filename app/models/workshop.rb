@@ -5,10 +5,10 @@ class Workshop < ActiveRecord::Base
 
   validates :speaker_id, presence: true
 
-  has_many :workshop_subscriptions
+  has_many :workshop_subscriptions, dependent: :destroy
   has_many :users, through: :workshop_subscriptions
 
-  has_many :workshop_waiting_lists
+  has_many :workshop_waiting_lists, dependent: :destroy
   has_many :user_lists, through: :workshop_waiting_lists, source: :user
 
   # Friendly Id

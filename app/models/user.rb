@@ -7,16 +7,16 @@ class User < ActiveRecord::Base
   validates :first_name, :last_name, presence: true
   validates :folio, presence: true, folio: true
 
-  has_many :event_subscriptions
+  has_many :event_subscriptions, dependent: :destroy
   has_many :events, through: :event_subscriptions
 
-  has_many :event_waiting_lists
+  has_many :event_waiting_lists, dependent: :destroy
   has_many :events_list, through: :event_waiting_lists, source: :event
 
-  has_many :workshop_subscriptions
+  has_many :workshop_subscriptions, dependent: :destroy
   has_many :workshops, through: :workshop_subscriptions
 
-  has_many :workshop_waiting_lists
+  has_many :workshop_waiting_lists, dependent: :destroy
   has_many :workshops_list, through: :workshop_waiting_lists, source: :workshop
 
   def full_name
@@ -73,6 +73,14 @@ class User < ActiveRecord::Base
 
   def workshop_number
     self.workshops.count
+  end
+
+  def is_admin?
+    if (5519..5521).include?(folio)
+      true
+    else
+      false
+    end
   end
 
   def banamex?

@@ -5,10 +5,10 @@ class Event < ActiveRecord::Base
 
   validates :name, :speaker_id, presence: true
 
-  has_many :event_subscriptions
+  has_many :event_subscriptions, dependent: :destroy
   has_many :users, through: :event_subscriptions
 
-  has_many :event_waiting_lists
+  has_many :event_waiting_lists, dependent: :destroy
   has_many :user_lists, through: :event_waiting_lists, source: :user
 
   # Friendly Id
