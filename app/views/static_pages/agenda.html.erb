@@ -158,7 +158,7 @@
 
           <div class="col-xs-3 column">
             <% Day.find(2).workshops.where(category_id: 6).order('slot ASC').each do |workshop| %>
-              <% if workshop.slot == 5 || workshop.slot == 12 %>
+              <% if workshop.slot == 5 || workshop.slot == 12 || workshop.slot == 10 %>
                 <div class="info">
                   <div class="content l-<%= workshop.length %> block">
                   </div>
