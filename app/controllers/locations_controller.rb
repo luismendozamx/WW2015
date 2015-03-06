@@ -1,5 +1,6 @@
 class LocationsController < ApplicationController
   before_action :set_location, only: [:show, :edit, :update, :destroy]
+  before_action :admin_user, only: [:show, :edit, :update, :destroy]
 
   respond_to :html
 
