@@ -1,6 +1,6 @@
 class FolioValidator < ActiveModel::Validator
   def validate(record)
-    unless (1..5522).include?(record.folio) && User.where(folio: record.folio).count < 2
+    unless (1..5523).include?(record.folio) && User.where(folio: record.folio).count < 2
       record.errors[:folio] << 'Folio Invalido'
     end
   end
